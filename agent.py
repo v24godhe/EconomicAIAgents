@@ -1,4 +1,6 @@
 from llm import get_agent_action
+from config import AGENT_MEMORY_SIZE, USE_MULTIMODAL
+from pygame_visualization import render_grid_for_agent, surface_to_base64
 
 class Agent:
     def __init__(self, name, start_pos=(4, 4)):
@@ -9,6 +11,8 @@ class Agent:
         self.alive = True
         self.consumption_rates = self.get_consumption_rates()
         self.actions_taken = []  # Track history for debugging
+        self.memory = []  # Store recent memories for LLM context
+        self.step_count = 0
 
     def get_agent_type(self):
         """Determine agent type based on consumption rates"""
@@ -18,6 +22,11 @@ class Agent:
             return 'green'
         else:
             return 'balanced'
+    
+    @property
+    def type(self):
+        """Property to get agent type"""
+        return self.get_agent_type()
 
     def get_consumption_rates(self):
         if self.name == "Agent1":
@@ -31,10 +40,56 @@ class Agent:
         else:
             return {'red': 0, 'green': 50}
 
+    def add_memory(self, observation, action_taken, result):
+        """Add a structured memory entry and maintain memory limit"""
+        memory_entry = (
+            f"Step {self.step_count}: "
+            f"Action: {action_taken} | "
+            f"Observation: {observation} | "
+            f"Outcome: {result} | "
+            f"Energy: {self.energy} | "
+            f"Inventory: {self.inventory}"
+        )
+        self.memory.append(memory_entry)
+        # Keep only last N memories
+        if len(self.memory) > AGENT_MEMORY_SIZE:
+            self.memory = self.memory[-AGENT_MEMORY_SIZE:]
+    
+    def get_current_observation(self, environment, all_agents):
+        """Generate current observation for memory"""
+        x, y = self.position
+        cell_content = environment.get_cell_content(x, y)
+        
+        # Count nearby food and agents
+        nearby_red = 0
+        nearby_green = 0
+        nearby_agents = 0
+        
+        for dx in [-1, 0, 1]:
+            for dy in [-1, 0, 1]:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < environment.size and 0 <= ny < environment.size:
+                    if environment.get_cell_content(nx, ny) == 'red':
+                        nearby_red += 1
+                    elif environment.get_cell_content(nx, ny) == 'green':
+                        nearby_green += 1
+        
+        for agent in all_agents:
+            if agent.alive and agent.name != self.name:
+                ax, ay = agent.position
+                if abs(ax - x) <= 1 and abs(ay - y) <= 1:
+                    nearby_agents += 1
+        
+        cell_desc = cell_content if cell_content else "empty"
+        return f"at {self.position}, cell has {cell_desc}, nearby: {nearby_red}R {nearby_green}G {nearby_agents}A, energy: {self.energy}"
+
     def decide_and_act(self, environment, trade_manager=None, all_agents=[]):
         if not self.alive:
             return "inactive"
 
+        self.step_count += 1
+        current_observation = self.get_current_observation(environment, all_agents)
+        
         self.energy -= 1
         if self.energy <= 0:
             self.alive = False
@@ -43,6 +98,17 @@ class Agent:
         x, y = self.position
         cell = environment.get_cell_content(x, y)
         occupied_positions = {a.position for a in all_agents if a.alive and a.name != self.name}
+
+        # Generate visual input for multimodal model
+        grid_image_base64 = None
+        if USE_MULTIMODAL:
+            try:
+                import pygame
+                pygame.init()  # Ensure pygame is initialized
+                grid_surface = render_grid_for_agent(environment, self, all_agents)
+                grid_image_base64 = surface_to_base64(grid_surface)
+            except Exception as e:
+                print(f"Failed to generate visual input for {self.name}: {e}")
 
         retry_message = None
         for attempt in range(2):
@@ -53,44 +119,67 @@ class Agent:
                 cell_content=cell,
                 energy=self.energy,
                 consumption_rate=self.consumption_rates,
+                memory=self.memory,
+                grid_image_base64=grid_image_base64,
                 retry_message=retry_message
             )
 
-            # # Track actions for debugging
-            # self.actions_taken.append(action)
+            # Defensive: Ensure action is always a string
+            if not action:
+                action = "do nothing"
 
+            # Track actions for debugging
+            self.actions_taken.append(action)
+
+            action_result = None
             if action.startswith("move"):
                 direction = action.split()[1]
                 moved = self.move(direction, environment.size, occupied_positions)
                 if moved:
-                    return f"moved {direction} (energy: {self.energy})"
+                    action_result = f"moved {direction} (energy: {self.energy})"
+                    self.add_memory(current_observation, action, "successful move")
+                    return action_result
                 else:
                     retry_message = f"your move {direction} was blocked"
+                    action_result = "move blocked"
 
             elif action == "collect":
                 result = self.collect(environment)
+                action_result = result
+                self.add_memory(current_observation, action, result)
                 return result
 
             elif action == "eat red" and self.inventory['red'] > 0:
                 self.inventory['red'] -= 1
                 self.energy += self.consumption_rates['red']
-                return f"ate red (+{self.consumption_rates['red']} energy)"
+                action_result = f"ate red (+{self.consumption_rates['red']} energy)"
+                self.add_memory(current_observation, action, f"gained {self.consumption_rates['red']} energy")
+                return action_result
 
             elif action == "eat green" and self.inventory['green'] > 0:
                 self.inventory['green'] -= 1
                 self.energy += self.consumption_rates['green']
-                return f"ate green (+{self.consumption_rates['green']} energy)"
+                action_result = f"ate green (+{self.consumption_rates['green']} energy)"
+                self.add_memory(current_observation, action, f"gained {self.consumption_rates['green']} energy")
+                return action_result
 
             elif action == "do nothing":
-                return "did nothing"
+                action_result = "did nothing"
+                self.add_memory(current_observation, action, "no action taken")
+                return action_result
             
             # Handle trade actions if trade_manager is provided
             elif action.startswith("trade") and trade_manager:
-                return self.handle_trade(action, trade_manager, all_agents)
+                action_result = self.handle_trade(action, trade_manager, all_agents)
+                self.add_memory(current_observation, action, action_result)
+                return action_result
 
             else:
                 retry_message = f"action '{action}' not possible"
+                action_result = "invalid action"
 
+        # If we get here, both attempts failed
+        self.add_memory(current_observation, "failed attempts", "no valid action found")
         return "failed to act"
 
     def handle_trade(self, action, trade_manager, all_agents):
@@ -140,5 +229,6 @@ class Agent:
             'inventory': self.inventory,
             'energy': self.energy,
             'alive': self.alive,
-            'last_actions': self.actions_taken[-5:] if self.actions_taken else []
+            'last_actions': self.actions_taken[-5:] if self.actions_taken else [],
+            'recent_memories': self.memory[-3:] if self.memory else []
         }

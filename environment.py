@@ -17,6 +17,18 @@ class Environment:
     def clear_cell(self, x, y):
         self.grid[x][y] = None
 
+    def count_food(self):
+        """Count total food in the environment"""
+        red_count = 0
+        green_count = 0
+        for row in self.grid:
+            for cell in row:
+                if cell == 'red':
+                    red_count += 1
+                elif cell == 'green':
+                    green_count += 1
+        return {'red': red_count, 'green': green_count}
+
     def print_grid(self, agent_positions=[]):
         agent_map = {agent.position: agent.name[-1] for agent in agent_positions}  # A1, A2...
 

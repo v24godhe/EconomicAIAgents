@@ -1,283 +1,7 @@
 [
   {
     "step": 10,
-    "timestamp": "2025-06-26T12:30:48.843231",
-    "agents": [
-      {
-        "name": "Agent1",
-        "type": "red",
-        "position": [
-          4,
-          3
-        ],
-        "inventory": {
-          "red": 6,
-          "green": 1
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": [
-          "collect",
-          "move down",
-          "collect",
-          "move down",
-          "collect"
-        ]
-      },
-      {
-        "name": "Agent2",
-        "type": "green",
-        "position": [
-          3,
-          4
-        ],
-        "inventory": {
-          "red": 2,
-          "green": 3
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": [
-          "collect",
-          "move left",
-          "collect",
-          "collect",
-          "collect"
-        ]
-      },
-      {
-        "name": "Agent3",
-        "type": "red",
-        "position": [
-          5,
-          6
-        ],
-        "inventory": {
-          "red": 4,
-          "green": 1
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": [
-          "collect",
-          "move down",
-          "collect",
-          "move down",
-          "move down"
-        ]
-      },
-      {
-        "name": "Agent4",
-        "type": "balanced",
-        "position": [
-          7,
-          2
-        ],
-        "inventory": {
-          "red": 3,
-          "green": 2
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": [
-          "move right",
-          "collect",
-          "move right",
-          "move down",
-          "collect"
-        ]
-      },
-      {
-        "name": "Agent5",
-        "type": "green",
-        "position": [
-          8,
-          5
-        ],
-        "inventory": {
-          "red": 2,
-          "green": 3
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": [
-          "move down",
-          "move left",
-          "move down",
-          "collect",
-          "collect"
-        ]
-      }
-    ],
-    "alive_count": 5
-  },
-  {
-    "step": 10,
-    "timestamp": "2025-06-26T12:38:07.418809",
-    "agents": [
-      {
-        "name": "Agent1",
-        "type": "red",
-        "position": [
-          7,
-          2
-        ],
-        "inventory": {
-          "red": 1,
-          "green": 3
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": []
-      },
-      {
-        "name": "Agent2",
-        "type": "green",
-        "position": [
-          2,
-          3
-        ],
-        "inventory": {
-          "red": 1,
-          "green": 5
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": []
-      },
-      {
-        "name": "Agent3",
-        "type": "red",
-        "position": [
-          5,
-          7
-        ],
-        "inventory": {
-          "red": 4,
-          "green": 1
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": []
-      },
-      {
-        "name": "Agent4",
-        "type": "balanced",
-        "position": [
-          6,
-          6
-        ],
-        "inventory": {
-          "red": 3,
-          "green": 2
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": []
-      },
-      {
-        "name": "Agent5",
-        "type": "green",
-        "position": [
-          5,
-          6
-        ],
-        "inventory": {
-          "red": 4,
-          "green": 1
-        },
-        "energy": 10,
-        "alive": true,
-        "last_actions": []
-      }
-    ],
-    "alive_count": 5
-  },
-  {
-    "step": 20,
-    "timestamp": "2025-06-26T12:39:16.440645",
-    "agents": [
-      {
-        "name": "Agent1",
-        "type": "red",
-        "position": [
-          7,
-          1
-        ],
-        "inventory": {
-          "red": 3,
-          "green": 4
-        },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
-      },
-      {
-        "name": "Agent2",
-        "type": "green",
-        "position": [
-          5,
-          3
-        ],
-        "inventory": {
-          "red": 3,
-          "green": 5
-        },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
-      },
-      {
-        "name": "Agent3",
-        "type": "red",
-        "position": [
-          8,
-          7
-        ],
-        "inventory": {
-          "red": 5,
-          "green": 3
-        },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
-      },
-      {
-        "name": "Agent4",
-        "type": "balanced",
-        "position": [
-          6,
-          6
-        ],
-        "inventory": {
-          "red": 4,
-          "green": 3
-        },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
-      },
-      {
-        "name": "Agent5",
-        "type": "green",
-        "position": [
-          7,
-          4
-        ],
-        "inventory": {
-          "red": 5,
-          "green": 3
-        },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
-      }
-    ],
-    "alive_count": 0
-  },
-  {
-    "step": 10,
-    "timestamp": "2025-06-26T13:11:15.241023",
+    "timestamp": "2025-07-02T14:14:03.296952",
     "agents": [
       {
         "name": "Agent1",
@@ -287,156 +11,1910 @@
           8
         ],
         "inventory": {
-          "red": 2,
-          "green": 2
+          "red": 0,
+          "green": 1
         },
-        "energy": 10,
+        "energy": 60,
         "alive": true,
-        "last_actions": []
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "collect",
+          "move down",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (8, 8), cell has empty, nearby: 0R 0G 1A, energy: 63 | Outcome: nothing to collect | Energy: 62 | Inventory: {'red': 0, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (8, 8), cell has empty, nearby: 0R 0G 1A, energy: 62 | Outcome: nothing to collect | Energy: 61 | Inventory: {'red': 0, 'green': 1}",
+          "Step 10: Action: failed attempts | Observation: at (8, 8), cell has empty, nearby: 0R 0G 1A, energy: 61 | Outcome: no valid action found | Energy: 60 | Inventory: {'red': 0, 'green': 1}"
+        ]
       },
       {
         "name": "Agent2",
         "type": "green",
         "position": [
+          3,
+          3
+        ],
+        "inventory": {
+          "red": 3,
+          "green": 1
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "collect",
+          "do nothing",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: do nothing | Observation: at (4, 3), cell has empty, nearby: 2R 3G 0A, energy: 13 | Outcome: no action taken | Energy: 12 | Inventory: {'red': 2, 'green': 1}",
+          "Step 9: Action: move up | Observation: at (4, 3), cell has empty, nearby: 2R 3G 0A, energy: 12 | Outcome: successful move | Energy: 11 | Inventory: {'red': 2, 'green': 1}",
+          "Step 10: Action: collect | Observation: at (3, 3), cell has red, nearby: 1R 2G 1A, energy: 11 | Outcome: collected red | Energy: 10 | Inventory: {'red': 3, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          7,
+          4
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "do nothing",
+          "move down",
+          "collect",
+          "eat green"
+        ],
+        "recent_memories": [
+          "Step 8: Action: move down | Observation: at (6, 4), cell has empty, nearby: 4R 3G 0A, energy: 13 | Outcome: successful move | Energy: 12 | Inventory: {'red': 1, 'green': 2}",
+          "Step 9: Action: collect | Observation: at (7, 4), cell has green, nearby: 4R 3G 0A, energy: 12 | Outcome: collected green | Energy: 11 | Inventory: {'red': 1, 'green': 3}",
+          "Step 10: Action: eat green | Observation: at (7, 4), cell has empty, nearby: 4R 2G 0A, energy: 11 | Outcome: gained 20 energy | Energy: 30 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          3,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "do nothing",
+          "move down"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (2, 2), cell has empty, nearby: 3R 2G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 2, 'green': 1}",
+          "Step 9: Action: do nothing | Observation: at (2, 2), cell has empty, nearby: 3R 2G 1A, energy: 12 | Outcome: no action taken | Energy: 11 | Inventory: {'red': 2, 'green': 1}",
+          "Step 10: Action: move down | Observation: at (2, 2), cell has empty, nearby: 2R 2G 1A, energy: 11 | Outcome: successful move | Energy: 10 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          7,
+          8
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (7, 8), cell has empty, nearby: 2R 0G 1A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 1, 'green': 2}",
+          "Step 9: Action: do nothing | Observation: at (7, 8), cell has empty, nearby: 2R 0G 1A, energy: 12 | Outcome: no action taken | Energy: 11 | Inventory: {'red': 1, 'green': 2}",
+          "Step 10: Action: collect | Observation: at (7, 8), cell has empty, nearby: 2R 0G 1A, energy: 11 | Outcome: nothing to collect | Energy: 10 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 5
+  },
+  {
+    "step": 20,
+    "timestamp": "2025-07-02T14:14:54.622763",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          6,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 50,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (7, 8), cell has empty, nearby: 0R 0G 1A, energy: 53 | Outcome: nothing to collect | Energy: 52 | Inventory: {'red': 0, 'green': 1}",
+          "Step 19: Action: move up | Observation: at (7, 8), cell has empty, nearby: 0R 0G 1A, energy: 52 | Outcome: successful move | Energy: 51 | Inventory: {'red': 0, 'green': 1}",
+          "Step 20: Action: do nothing | Observation: at (6, 8), cell has empty, nearby: 0R 1G 1A, energy: 51 | Outcome: no action taken | Energy: 50 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "red": 4,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: move up | Observation: at (2, 2), cell has empty, nearby: 2R 2G 0A, energy: 4 | Outcome: successful move | Energy: 3 | Inventory: {'red': 3, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 3, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 4, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          7,
+          4
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 3
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (8, 4), cell has green, nearby: 3R 1G 0A, energy: 23 | Outcome: collected green | Energy: 22 | Inventory: {'red': 1, 'green': 3}",
+          "Step 19: Action: move up | Observation: at (8, 4), cell has empty, nearby: 3R 0G 0A, energy: 22 | Outcome: successful move | Energy: 21 | Inventory: {'red': 1, 'green': 3}",
+          "Step 20: Action: do nothing | Observation: at (7, 4), cell has empty, nearby: 4R 1G 0A, energy: 21 | Outcome: no action taken | Energy: 20 | Inventory: {'red': 1, 'green': 3}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
           4,
-          6
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 2, 'green': 2}",
+          "Step 18: Action: move up | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 2, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (4, 2), cell has green, nearby: 3R 2G 0A, energy: 2 | Outcome: no action taken | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "collect",
+          "move left",
+          "collect",
+          "collect",
+          "eat red"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (6, 7), cell has red, nearby: 2R 2G 1A, energy: 4 | Outcome: collected red | Energy: 3 | Inventory: {'red': 3, 'green': 2}",
+          "Step 18: Action: collect | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 3 | Outcome: nothing to collect | Energy: 2 | Inventory: {'red': 3, 'green': 2}",
+          "Step 19: Action: eat red | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 2 | Outcome: gained 0 energy | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 2
+  },
+  {
+    "step": 30,
+    "timestamp": "2025-07-02T14:15:14.599986",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          4,
+          7
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 4
+        },
+        "energy": 40,
+        "alive": true,
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "move left",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 28: Action: collect | Observation: at (4, 8), cell has empty, nearby: 0R 4G 0A, energy: 43 | Outcome: nothing to collect | Energy: 42 | Inventory: {'red': 0, 'green': 3}",
+          "Step 29: Action: move left | Observation: at (4, 8), cell has empty, nearby: 0R 4G 0A, energy: 42 | Outcome: successful move | Energy: 41 | Inventory: {'red': 0, 'green': 3}",
+          "Step 30: Action: collect | Observation: at (4, 7), cell has green, nearby: 2R 4G 0A, energy: 41 | Outcome: collected green | Energy: 40 | Inventory: {'red': 0, 'green': 4}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "red": 4,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: move up | Observation: at (2, 2), cell has empty, nearby: 2R 2G 0A, energy: 4 | Outcome: successful move | Energy: 3 | Inventory: {'red': 3, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 3, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 4, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          7,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "move left",
+          "do nothing",
+          "collect",
+          "move left"
+        ],
+        "recent_memories": [
+          "Step 28: Action: do nothing | Observation: at (7, 3), cell has red, nearby: 4R 1G 0A, energy: 33 | Outcome: no action taken | Energy: 32 | Inventory: {'red': 1, 'green': 2}",
+          "Step 29: Action: collect | Observation: at (7, 3), cell has red, nearby: 4R 1G 0A, energy: 32 | Outcome: collected red | Energy: 31 | Inventory: {'red': 2, 'green': 2}",
+          "Step 30: Action: move left | Observation: at (7, 3), cell has empty, nearby: 3R 1G 0A, energy: 31 | Outcome: successful move | Energy: 30 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          4,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 2, 'green': 2}",
+          "Step 18: Action: move up | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 2, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (4, 2), cell has green, nearby: 3R 2G 0A, energy: 2 | Outcome: no action taken | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "collect",
+          "move left",
+          "collect",
+          "collect",
+          "eat red"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (6, 7), cell has red, nearby: 2R 2G 1A, energy: 4 | Outcome: collected red | Energy: 3 | Inventory: {'red': 3, 'green': 2}",
+          "Step 18: Action: collect | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 3 | Outcome: nothing to collect | Energy: 2 | Inventory: {'red': 3, 'green': 2}",
+          "Step 19: Action: eat red | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 2 | Outcome: gained 0 energy | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 2
+  },
+  {
+    "step": 40,
+    "timestamp": "2025-07-02T14:15:34.656369",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          4,
+          4
         ],
         "inventory": {
           "red": 2,
           "green": 4
         },
-        "energy": 10,
+        "energy": 30,
         "alive": true,
-        "last_actions": []
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move left",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: move left | Observation: at (4, 5), cell has empty, nearby: 2R 1G 0A, energy: 33 | Outcome: successful move | Energy: 32 | Inventory: {'red': 2, 'green': 4}",
+          "Step 39: Action: do nothing | Observation: at (4, 4), cell has empty, nearby: 2R 1G 0A, energy: 32 | Outcome: no action taken | Energy: 31 | Inventory: {'red': 2, 'green': 4}",
+          "Step 40: Action: collect | Observation: at (4, 4), cell has empty, nearby: 2R 1G 0A, energy: 31 | Outcome: nothing to collect | Energy: 30 | Inventory: {'red': 2, 'green': 4}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "red": 4,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: move up | Observation: at (2, 2), cell has empty, nearby: 2R 2G 0A, energy: 4 | Outcome: successful move | Energy: 3 | Inventory: {'red': 3, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 3, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 4, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          5,
+          1
+        ],
+        "inventory": {
+          "red": 4,
+          "green": 3
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "move up",
+          "collect",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: collect | Observation: at (6, 1), cell has empty, nearby: 2R 1G 0A, energy: 23 | Outcome: nothing to collect | Energy: 22 | Inventory: {'red': 3, 'green': 3}",
+          "Step 39: Action: move up | Observation: at (6, 1), cell has empty, nearby: 2R 1G 0A, energy: 22 | Outcome: successful move | Energy: 21 | Inventory: {'red': 3, 'green': 3}",
+          "Step 40: Action: collect | Observation: at (5, 1), cell has red, nearby: 2R 3G 0A, energy: 21 | Outcome: collected red | Energy: 20 | Inventory: {'red': 4, 'green': 3}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          4,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 2, 'green': 2}",
+          "Step 18: Action: move up | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 2, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (4, 2), cell has green, nearby: 3R 2G 0A, energy: 2 | Outcome: no action taken | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "collect",
+          "move left",
+          "collect",
+          "collect",
+          "eat red"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (6, 7), cell has red, nearby: 2R 2G 1A, energy: 4 | Outcome: collected red | Energy: 3 | Inventory: {'red': 3, 'green': 2}",
+          "Step 18: Action: collect | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 3 | Outcome: nothing to collect | Energy: 2 | Inventory: {'red': 3, 'green': 2}",
+          "Step 19: Action: eat red | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 2 | Outcome: gained 0 energy | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 2
+  },
+  {
+    "step": 50,
+    "timestamp": "2025-07-02T14:15:53.883910",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          5,
+          4
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 4
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move down"
+        ],
+        "recent_memories": [
+          "Step 48: Action: do nothing | Observation: at (4, 4), cell has empty, nearby: 3R 2G 0A, energy: 23 | Outcome: no action taken | Energy: 22 | Inventory: {'red': 2, 'green': 4}",
+          "Step 49: Action: collect | Observation: at (4, 4), cell has empty, nearby: 3R 2G 0A, energy: 22 | Outcome: nothing to collect | Energy: 21 | Inventory: {'red': 2, 'green': 4}",
+          "Step 50: Action: move down | Observation: at (4, 4), cell has empty, nearby: 3R 2G 0A, energy: 21 | Outcome: successful move | Energy: 20 | Inventory: {'red': 2, 'green': 4}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          1,
+          2
+        ],
+        "inventory": {
+          "red": 4,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: move up | Observation: at (2, 2), cell has empty, nearby: 2R 2G 0A, energy: 4 | Outcome: successful move | Energy: 3 | Inventory: {'red': 3, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 3, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (1, 2), cell has red, nearby: 3R 2G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 4, 'green': 1}"
+        ]
       },
       {
         "name": "Agent3",
         "type": "red",
         "position": [
           3,
-          4
+          1
         ],
         "inventory": {
           "red": 5,
-          "green": 2
+          "green": 4
         },
         "energy": 10,
         "alive": true,
-        "last_actions": []
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 48: Action: collect | Observation: at (4, 1), cell has empty, nearby: 0R 5G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 5, 'green': 3}",
+          "Step 49: Action: move up | Observation: at (4, 1), cell has empty, nearby: 0R 5G 0A, energy: 12 | Outcome: successful move | Energy: 11 | Inventory: {'red': 5, 'green': 3}",
+          "Step 50: Action: collect | Observation: at (3, 1), cell has green, nearby: 1R 7G 0A, energy: 11 | Outcome: collected green | Energy: 10 | Inventory: {'red': 5, 'green': 4}"
+        ]
       },
       {
         "name": "Agent4",
         "type": "balanced",
         "position": [
+          4,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 2, 'green': 2}",
+          "Step 18: Action: move up | Observation: at (5, 2), cell has empty, nearby: 4R 1G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 2, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (4, 2), cell has green, nearby: 3R 2G 0A, energy: 2 | Outcome: no action taken | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "collect",
+          "move left",
+          "collect",
+          "collect",
+          "eat red"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (6, 7), cell has red, nearby: 2R 2G 1A, energy: 4 | Outcome: collected red | Energy: 3 | Inventory: {'red': 3, 'green': 2}",
+          "Step 18: Action: collect | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 3 | Outcome: nothing to collect | Energy: 2 | Inventory: {'red': 3, 'green': 2}",
+          "Step 19: Action: eat red | Observation: at (6, 7), cell has empty, nearby: 1R 2G 1A, energy: 2 | Outcome: gained 0 energy | Energy: 1 | Inventory: {'red': 2, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 2
+  },
+  {
+    "step": 10,
+    "timestamp": "2025-07-02T14:23:21.731443",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 60,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "do nothing",
+          "collect",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 63 | Outcome: nothing to collect | Energy: 62 | Inventory: {'red': 0, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 62 | Outcome: nothing to collect | Energy: 61 | Inventory: {'red': 0, 'green': 1}",
+          "Step 10: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 61 | Outcome: nothing to collect | Energy: 60 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
           7,
+          8
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "do nothing",
+          "collect",
+          "collect",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (7, 8), cell has red, nearby: 3R 2G 0A, energy: 13 | Outcome: collected red | Energy: 12 | Inventory: {'red': 2, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (7, 8), cell has empty, nearby: 2R 2G 0A, energy: 12 | Outcome: nothing to collect | Energy: 11 | Inventory: {'red': 2, 'green': 1}",
+          "Step 10: Action: do nothing | Observation: at (7, 8), cell has empty, nearby: 2R 2G 0A, energy: 11 | Outcome: no action taken | Energy: 10 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          1,
           0
         ],
         "inventory": {
-          "red": 4,
+          "red": 1,
           "green": 1
         },
-        "energy": 10,
+        "energy": 40,
         "alive": true,
-        "last_actions": []
+        "last_actions": [
+          "collect",
+          "eat red",
+          "collect",
+          "collect",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (1, 0), cell has empty, nearby: 0R 3G 1A, energy: 43 | Outcome: nothing to collect | Energy: 42 | Inventory: {'red': 1, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (1, 0), cell has empty, nearby: 0R 3G 1A, energy: 42 | Outcome: nothing to collect | Energy: 41 | Inventory: {'red': 1, 'green': 1}",
+          "Step 10: Action: do nothing | Observation: at (1, 0), cell has empty, nearby: 0R 3G 1A, energy: 41 | Outcome: no action taken | Energy: 40 | Inventory: {'red': 1, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          7,
+          3
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 35,
+        "alive": true,
+        "last_actions": [
+          "eat red",
+          "do nothing",
+          "do nothing",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: do nothing | Observation: at (7, 3), cell has empty, nearby: 2R 3G 0A, energy: 38 | Outcome: no action taken | Energy: 37 | Inventory: {'red': 0, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (7, 3), cell has empty, nearby: 2R 3G 0A, energy: 37 | Outcome: nothing to collect | Energy: 36 | Inventory: {'red': 0, 'green': 1}",
+          "Step 10: Action: collect | Observation: at (7, 3), cell has empty, nearby: 2R 3G 0A, energy: 36 | Outcome: nothing to collect | Energy: 35 | Inventory: {'red': 0, 'green': 1}"
+        ]
       },
       {
         "name": "Agent5",
         "type": "green",
         "position": [
-          5,
-          8
+          0,
+          5
         ],
         "inventory": {
-          "red": 3,
+          "red": 1,
           "green": 1
         },
         "energy": 10,
         "alive": true,
-        "last_actions": []
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 1, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 12 | Outcome: nothing to collect | Energy: 11 | Inventory: {'red': 1, 'green': 1}",
+          "Step 10: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 11 | Outcome: nothing to collect | Energy: 10 | Inventory: {'red': 1, 'green': 1}"
+        ]
       }
     ],
     "alive_count": 5
   },
   {
     "step": 20,
-    "timestamp": "2025-06-26T13:12:26.112443",
+    "timestamp": "2025-07-02T14:24:08.854895",
     "agents": [
       {
         "name": "Agent1",
         "type": "red",
         "position": [
-          8,
-          3
+          1,
+          1
         ],
         "inventory": {
-          "red": 4,
-          "green": 3
+          "red": 0,
+          "green": 1
+        },
+        "energy": 50,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "collect",
+          "collect",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 53 | Outcome: nothing to collect | Energy: 52 | Inventory: {'red': 0, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 52 | Outcome: nothing to collect | Energy: 51 | Inventory: {'red': 0, 'green': 1}",
+          "Step 20: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 51 | Outcome: nothing to collect | Energy: 50 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          6,
+          8
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 0
+        },
+        "energy": 50,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "eat red",
+          "do nothing",
+          "collect",
+          "eat green"
+        ],
+        "recent_memories": [
+          "Step 18: Action: do nothing | Observation: at (6, 8), cell has empty, nearby: 2R 2G 0A, energy: 23 | Outcome: no action taken | Energy: 22 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (6, 8), cell has empty, nearby: 2R 2G 0A, energy: 22 | Outcome: nothing to collect | Energy: 21 | Inventory: {'red': 1, 'green': 1}",
+          "Step 20: Action: eat green | Observation: at (6, 8), cell has empty, nearby: 2R 2G 0A, energy: 21 | Outcome: gained 30 energy | Energy: 50 | Inventory: {'red': 1, 'green': 0}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          1,
+          0
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 0
+        },
+        "energy": 80,
+        "alive": true,
+        "last_actions": [
+          "eat green",
+          "move down",
+          "collect",
+          "do nothing",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (2, 0), cell has empty, nearby: 1R 1G 1A, energy: 83 | Outcome: nothing to collect | Energy: 82 | Inventory: {'red': 0, 'green': 0}",
+          "Step 19: Action: do nothing | Observation: at (2, 0), cell has empty, nearby: 1R 1G 1A, energy: 82 | Outcome: no action taken | Energy: 81 | Inventory: {'red': 0, 'green': 0}",
+          "Step 20: Action: move up | Observation: at (2, 0), cell has empty, nearby: 1R 1G 1A, energy: 81 | Outcome: successful move | Energy: 80 | Inventory: {'red': 0, 'green': 0}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          6,
+          2
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 25,
+        "alive": true,
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (6, 2), cell has empty, nearby: 2R 0G 0A, energy: 28 | Outcome: nothing to collect | Energy: 27 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (6, 2), cell has empty, nearby: 2R 0G 0A, energy: 27 | Outcome: no action taken | Energy: 26 | Inventory: {'red': 1, 'green': 2}",
+          "Step 20: Action: collect | Observation: at (6, 2), cell has empty, nearby: 2R 0G 0A, energy: 26 | Outcome: nothing to collect | Energy: 25 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          0,
+          5
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 1
         },
         "energy": 0,
         "alive": false,
-        "last_actions": []
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 2 | Outcome: nothing to collect | Energy: 1 | Inventory: {'red': 1, 'green': 1}"
+        ]
+      }
+    ],
+    "alive_count": 4
+  },
+  {
+    "step": 30,
+    "timestamp": "2025-07-02T14:24:45.607396",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 40,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "collect",
+          "collect",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 28: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 5G 1A, energy: 43 | Outcome: nothing to collect | Energy: 42 | Inventory: {'red': 0, 'green': 1}",
+          "Step 29: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 4G 1A, energy: 42 | Outcome: nothing to collect | Energy: 41 | Inventory: {'red': 0, 'green': 1}",
+          "Step 30: Action: collect | Observation: at (1, 1), cell has empty, nearby: 1R 4G 1A, energy: 41 | Outcome: nothing to collect | Energy: 40 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 0
+        },
+        "energy": 90,
+        "alive": true,
+        "last_actions": [
+          "eat green",
+          "eat red",
+          "do nothing",
+          "do nothing",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 28: Action: do nothing | Observation: at (6, 7), cell has empty, nearby: 2R 3G 0A, energy: 93 | Outcome: no action taken | Energy: 92 | Inventory: {'red': 0, 'green': 0}",
+          "Step 29: Action: do nothing | Observation: at (6, 7), cell has empty, nearby: 2R 3G 0A, energy: 92 | Outcome: no action taken | Energy: 91 | Inventory: {'red': 0, 'green': 0}",
+          "Step 30: Action: do nothing | Observation: at (6, 7), cell has empty, nearby: 2R 3G 0A, energy: 91 | Outcome: no action taken | Energy: 90 | Inventory: {'red': 0, 'green': 0}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          0
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 100,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "move up",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 28: Action: collect | Observation: at (0, 0), cell has green, nearby: 0R 2G 1A, energy: 103 | Outcome: collected green | Energy: 102 | Inventory: {'red': 0, 'green': 1}",
+          "Step 29: Action: do nothing | Observation: at (0, 0), cell has empty, nearby: 0R 1G 1A, energy: 102 | Outcome: no action taken | Energy: 101 | Inventory: {'red': 0, 'green': 1}",
+          "Step 30: Action: collect | Observation: at (0, 0), cell has empty, nearby: 0R 1G 1A, energy: 101 | Outcome: nothing to collect | Energy: 100 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          7,
+          1
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 4
+        },
+        "energy": 15,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "collect",
+          "move left",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 28: Action: move left | Observation: at (7, 2), cell has empty, nearby: 1R 3G 0A, energy: 18 | Outcome: successful move | Energy: 17 | Inventory: {'red': 1, 'green': 3}",
+          "Step 29: Action: collect | Observation: at (7, 1), cell has green, nearby: 1R 4G 0A, energy: 17 | Outcome: collected green | Energy: 16 | Inventory: {'red': 1, 'green': 4}",
+          "Step 30: Action: collect | Observation: at (7, 1), cell has empty, nearby: 1R 3G 0A, energy: 16 | Outcome: nothing to collect | Energy: 15 | Inventory: {'red': 1, 'green': 4}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          0,
+          5
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 2 | Outcome: nothing to collect | Energy: 1 | Inventory: {'red': 1, 'green': 1}"
+        ]
+      }
+    ],
+    "alive_count": 4
+  },
+  {
+    "step": 40,
+    "timestamp": "2025-07-02T14:25:24.542602",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          1,
+          1
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 2
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "do nothing",
+          "collect",
+          "collect",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 38: Action: collect | Observation: at (2, 1), cell has empty, nearby: 1R 3G 0A, energy: 33 | Outcome: nothing to collect | Energy: 32 | Inventory: {'red': 0, 'green': 2}",
+          "Step 39: Action: collect | Observation: at (2, 1), cell has empty, nearby: 1R 3G 0A, energy: 32 | Outcome: nothing to collect | Energy: 31 | Inventory: {'red': 0, 'green': 2}",
+          "Step 40: Action: move up | Observation: at (2, 1), cell has empty, nearby: 1R 3G 0A, energy: 31 | Outcome: successful move | Energy: 30 | Inventory: {'red': 0, 'green': 2}"
+        ]
       },
       {
         "name": "Agent2",
         "type": "green",
         "position": [
           5,
-          4
+          8
         ],
         "inventory": {
-          "red": 4,
-          "green": 6
+          "red": 0,
+          "green": 0
         },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
+        "energy": 100,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "move up",
+          "do nothing",
+          "collect",
+          "eat red"
+        ],
+        "recent_memories": [
+          "Step 38: Action: do nothing | Observation: at (5, 8), cell has red, nearby: 2R 1G 0A, energy: 83 | Outcome: no action taken | Energy: 82 | Inventory: {'red': 0, 'green': 0}",
+          "Step 39: Action: collect | Observation: at (5, 8), cell has red, nearby: 2R 1G 0A, energy: 82 | Outcome: collected red | Energy: 81 | Inventory: {'red': 1, 'green': 0}",
+          "Step 40: Action: eat red | Observation: at (5, 8), cell has empty, nearby: 1R 1G 0A, energy: 81 | Outcome: gained 20 energy | Energy: 100 | Inventory: {'red': 0, 'green': 0}"
+        ]
       },
       {
         "name": "Agent3",
         "type": "red",
         "position": [
-          3,
-          5
+          0,
+          0
         ],
         "inventory": {
-          "red": 5,
-          "green": 4
+          "red": 0,
+          "green": 1
         },
-        "energy": 0,
-        "alive": false,
-        "last_actions": []
+        "energy": 90,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "do nothing",
+          "collect",
+          "collect",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 38: Action: collect | Observation: at (0, 0), cell has empty, nearby: 0R 1G 0A, energy: 93 | Outcome: nothing to collect | Energy: 92 | Inventory: {'red': 0, 'green': 1}",
+          "Step 39: Action: collect | Observation: at (0, 0), cell has empty, nearby: 0R 1G 0A, energy: 92 | Outcome: nothing to collect | Energy: 91 | Inventory: {'red': 0, 'green': 1}",
+          "Step 40: Action: do nothing | Observation: at (0, 0), cell has empty, nearby: 0R 1G 1A, energy: 91 | Outcome: no action taken | Energy: 90 | Inventory: {'red': 0, 'green': 1}"
+        ]
       },
       {
         "name": "Agent4",
         "type": "balanced",
         "position": [
-          8,
+          7,
           1
         ],
         "inventory": {
-          "red": 4,
+          "red": 1,
+          "green": 3
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "eat green",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: collect | Observation: at (7, 1), cell has empty, nearby: 1R 3G 0A, energy: 33 | Outcome: nothing to collect | Energy: 32 | Inventory: {'red': 1, 'green': 3}",
+          "Step 39: Action: do nothing | Observation: at (7, 1), cell has empty, nearby: 1R 3G 0A, energy: 32 | Outcome: no action taken | Energy: 31 | Inventory: {'red': 1, 'green': 3}",
+          "Step 40: Action: collect | Observation: at (7, 1), cell has empty, nearby: 1R 3G 0A, energy: 31 | Outcome: nothing to collect | Energy: 30 | Inventory: {'red': 1, 'green': 3}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          0,
+          5
+        ],
+        "inventory": {
+          "red": 1,
           "green": 1
         },
         "energy": 0,
         "alive": false,
-        "last_actions": []
+        "last_actions": [
+          "move up",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: do nothing | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 3 | Outcome: no action taken | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 5), cell has empty, nearby: 1R 2G 0A, energy: 2 | Outcome: nothing to collect | Energy: 1 | Inventory: {'red': 1, 'green': 1}"
+        ]
+      }
+    ],
+    "alive_count": 4
+  },
+  {
+    "step": 10,
+    "timestamp": "2025-07-02T14:26:31.901720",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          3,
+          8
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "move up",
+          "collect",
+          "collect",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (4, 8), cell has empty, nearby: 3R 1G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 2, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (4, 8), cell has empty, nearby: 3R 1G 0A, energy: 12 | Outcome: nothing to collect | Energy: 11 | Inventory: {'red': 2, 'green': 1}",
+          "Step 10: Action: move up | Observation: at (4, 8), cell has empty, nearby: 3R 1G 0A, energy: 11 | Outcome: successful move | Energy: 10 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          7,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 2
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "do nothing",
+          "eat red",
+          "move down",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 8: Action: eat red | Observation: at (6, 8), cell has empty, nearby: 1R 1G 0A, energy: 13 | Outcome: gained 20 energy | Energy: 32 | Inventory: {'red': 0, 'green': 2}",
+          "Step 9: Action: move down | Observation: at (6, 8), cell has empty, nearby: 1R 1G 0A, energy: 32 | Outcome: successful move | Energy: 31 | Inventory: {'red': 0, 'green': 2}",
+          "Step 10: Action: do nothing | Observation: at (7, 8), cell has empty, nearby: 0R 1G 1A, energy: 31 | Outcome: no action taken | Energy: 30 | Inventory: {'red': 0, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 60,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "do nothing",
+          "do nothing",
+          "collect",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 8: Action: do nothing | Observation: at (1, 8), cell has empty, nearby: 2R 0G 0A, energy: 63 | Outcome: no action taken | Energy: 62 | Inventory: {'red': 0, 'green': 1}",
+          "Step 9: Action: collect | Observation: at (1, 8), cell has empty, nearby: 2R 0G 0A, energy: 62 | Outcome: nothing to collect | Energy: 61 | Inventory: {'red': 0, 'green': 1}",
+          "Step 10: Action: move up | Observation: at (1, 8), cell has empty, nearby: 2R 0G 0A, energy: 61 | Outcome: successful move | Energy: 60 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          4,
+          1
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 1
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "do nothing",
+          "collect",
+          "move left",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (4, 2), cell has empty, nearby: 3R 0G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 1, 'green': 1}",
+          "Step 9: Action: move left | Observation: at (4, 2), cell has empty, nearby: 3R 0G 0A, energy: 12 | Outcome: successful move | Energy: 11 | Inventory: {'red': 1, 'green': 1}",
+          "Step 10: Action: do nothing | Observation: at (4, 1), cell has empty, nearby: 3R 2G 0A, energy: 11 | Outcome: no action taken | Energy: 10 | Inventory: {'red': 1, 'green': 1}"
+        ]
       },
       {
         "name": "Agent5",
         "type": "green",
         "position": [
           8,
+          8
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 10,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "collect",
+          "collect",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 8: Action: collect | Observation: at (8, 8), cell has empty, nearby: 0R 1G 0A, energy: 13 | Outcome: nothing to collect | Energy: 12 | Inventory: {'red': 1, 'green': 2}",
+          "Step 9: Action: do nothing | Observation: at (8, 8), cell has empty, nearby: 0R 1G 1A, energy: 12 | Outcome: no action taken | Energy: 11 | Inventory: {'red': 1, 'green': 2}",
+          "Step 10: Action: collect | Observation: at (8, 8), cell has empty, nearby: 0R 1G 1A, energy: 11 | Outcome: nothing to collect | Energy: 10 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 5
+  },
+  {
+    "step": 20,
+    "timestamp": "2025-07-02T14:27:17.802385",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          1,
+          8
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 50,
+        "alive": true,
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "do nothing",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 18: Action: collect | Observation: at (2, 8), cell has empty, nearby: 2R 0G 0A, energy: 53 | Outcome: nothing to collect | Energy: 52 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: do nothing | Observation: at (2, 8), cell has empty, nearby: 2R 0G 0A, energy: 52 | Outcome: no action taken | Energy: 51 | Inventory: {'red': 1, 'green': 2}",
+          "Step 20: Action: move up | Observation: at (2, 8), cell has empty, nearby: 2R 0G 0A, energy: 51 | Outcome: successful move | Energy: 50 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          7,
           6
         ],
         "inventory": {
-          "red": 3,
+          "red": 0,
+          "green": 3
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "move left",
+          "do nothing",
+          "collect",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 18: Action: do nothing | Observation: at (8, 6), cell has empty, nearby: 2R 0G 0A, energy: 23 | Outcome: no action taken | Energy: 22 | Inventory: {'red': 0, 'green': 3}",
+          "Step 19: Action: collect | Observation: at (8, 6), cell has empty, nearby: 2R 0G 1A, energy: 22 | Outcome: nothing to collect | Energy: 21 | Inventory: {'red': 0, 'green': 3}",
+          "Step 20: Action: move up | Observation: at (8, 6), cell has empty, nearby: 2R 0G 0A, energy: 21 | Outcome: successful move | Energy: 20 | Inventory: {'red': 0, 'green': 3}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 50,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "move up",
+          "do nothing",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 18: Action: do nothing | Observation: at (0, 8), cell has empty, nearby: 1R 0G 0A, energy: 53 | Outcome: no action taken | Energy: 52 | Inventory: {'red': 0, 'green': 1}",
+          "Step 19: Action: do nothing | Observation: at (0, 8), cell has empty, nearby: 1R 0G 0A, energy: 52 | Outcome: no action taken | Energy: 51 | Inventory: {'red': 0, 'green': 1}",
+          "Step 20: Action: collect | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 51 | Outcome: nothing to collect | Energy: 50 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          0,
+          1
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "move up",
+          "do nothing",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: do nothing | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 4 | Outcome: no action taken | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: move up | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 1), cell has red, nearby: 2R 1G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 1,
           "green": 2
         },
         "energy": 0,
         "alive": false,
-        "last_actions": []
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "move left",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 2}",
+          "Step 18: Action: move left | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: move up | Observation: at (7, 7), cell has empty, nearby: 2R 0G 1A, energy: 2 | Outcome: successful move | Energy: 1 | Inventory: {'red': 1, 'green': 2}"
+        ]
       }
     ],
-    "alive_count": 0
+    "alive_count": 3
+  },
+  {
+    "step": 30,
+    "timestamp": "2025-07-02T14:28:04.165454",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          2,
+          8
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 1
+        },
+        "energy": 40,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "move up",
+          "move down"
+        ],
+        "recent_memories": [
+          "Step 28: Action: collect | Observation: at (1, 8), cell has empty, nearby: 2R 0G 1A, energy: 43 | Outcome: nothing to collect | Energy: 42 | Inventory: {'red': 1, 'green': 1}",
+          "Step 29: Action: failed attempts | Observation: at (1, 8), cell has empty, nearby: 2R 0G 1A, energy: 42 | Outcome: no valid action found | Energy: 41 | Inventory: {'red': 1, 'green': 1}",
+          "Step 30: Action: move down | Observation: at (1, 8), cell has empty, nearby: 2R 0G 1A, energy: 41 | Outcome: successful move | Energy: 40 | Inventory: {'red': 1, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          8,
+          5
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 3
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "move left",
+          "do nothing",
+          "collect",
+          "eat red",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 28: Action: collect | Observation: at (8, 5), cell has red, nearby: 2R 1G 0A, energy: 13 | Outcome: collected red | Energy: 12 | Inventory: {'red': 2, 'green': 3}",
+          "Step 29: Action: eat red | Observation: at (8, 5), cell has empty, nearby: 1R 1G 0A, energy: 12 | Outcome: gained 20 energy | Energy: 31 | Inventory: {'red': 1, 'green': 3}",
+          "Step 30: Action: do nothing | Observation: at (8, 5), cell has empty, nearby: 1R 1G 0A, energy: 31 | Outcome: no action taken | Energy: 30 | Inventory: {'red': 1, 'green': 3}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 40,
+        "alive": true,
+        "last_actions": [
+          "move down",
+          "move down",
+          "move up",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 28: Action: failed attempts | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 43 | Outcome: no valid action found | Energy: 42 | Inventory: {'red': 0, 'green': 1}",
+          "Step 29: Action: failed attempts | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 42 | Outcome: no valid action found | Energy: 41 | Inventory: {'red': 0, 'green': 1}",
+          "Step 30: Action: collect | Observation: at (0, 8), cell has empty, nearby: 1R 0G 0A, energy: 41 | Outcome: nothing to collect | Energy: 40 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          0,
+          1
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "move up",
+          "do nothing",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: do nothing | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 4 | Outcome: no action taken | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: move up | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 1), cell has red, nearby: 2R 1G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "move left",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 2}",
+          "Step 18: Action: move left | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: move up | Observation: at (7, 7), cell has empty, nearby: 2R 0G 1A, energy: 2 | Outcome: successful move | Energy: 1 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 3
+  },
+  {
+    "step": 40,
+    "timestamp": "2025-07-02T14:28:35.433231",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          3,
+          8
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "collect",
+          "collect",
+          "collect",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: collect | Observation: at (3, 8), cell has empty, nearby: 3R 0G 0A, energy: 33 | Outcome: nothing to collect | Energy: 32 | Inventory: {'red': 2, 'green': 1}",
+          "Step 39: Action: collect | Observation: at (3, 8), cell has empty, nearby: 3R 0G 0A, energy: 32 | Outcome: nothing to collect | Energy: 31 | Inventory: {'red': 2, 'green': 1}",
+          "Step 40: Action: collect | Observation: at (3, 8), cell has empty, nearby: 3R 0G 0A, energy: 31 | Outcome: nothing to collect | Energy: 30 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          7,
+          3
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 5
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "collect",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: move up | Observation: at (8, 3), cell has empty, nearby: 0R 3G 0A, energy: 23 | Outcome: successful move | Energy: 22 | Inventory: {'red': 2, 'green': 4}",
+          "Step 39: Action: do nothing | Observation: at (7, 3), cell has green, nearby: 2R 4G 0A, energy: 22 | Outcome: no action taken | Energy: 21 | Inventory: {'red': 2, 'green': 4}",
+          "Step 40: Action: collect | Observation: at (7, 3), cell has green, nearby: 2R 4G 0A, energy: 21 | Outcome: collected green | Energy: 20 | Inventory: {'red': 2, 'green': 5}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 30,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "move down",
+          "move up",
+          "do nothing",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 38: Action: move up | Observation: at (1, 8), cell has empty, nearby: 2R 0G 0A, energy: 33 | Outcome: successful move | Energy: 32 | Inventory: {'red': 0, 'green': 1}",
+          "Step 39: Action: do nothing | Observation: at (0, 8), cell has empty, nearby: 1R 0G 0A, energy: 32 | Outcome: no action taken | Energy: 31 | Inventory: {'red': 0, 'green': 1}",
+          "Step 40: Action: collect | Observation: at (0, 8), cell has empty, nearby: 1R 0G 0A, energy: 31 | Outcome: nothing to collect | Energy: 30 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          0,
+          1
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "move up",
+          "do nothing",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: do nothing | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 4 | Outcome: no action taken | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: move up | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 1), cell has red, nearby: 2R 1G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "move left",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 2}",
+          "Step 18: Action: move left | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: move up | Observation: at (7, 7), cell has empty, nearby: 2R 0G 1A, energy: 2 | Outcome: successful move | Energy: 1 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 3
+  },
+  {
+    "step": 50,
+    "timestamp": "2025-07-02T14:29:36.358200",
+    "agents": [
+      {
+        "name": "Agent1",
+        "type": "red",
+        "position": [
+          1,
+          8
+        ],
+        "inventory": {
+          "red": 3,
+          "green": 1
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "collect",
+          "move up",
+          "collect",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 48: Action: move up | Observation: at (2, 8), cell has empty, nearby: 2R 0G 0A, energy: 23 | Outcome: successful move | Energy: 22 | Inventory: {'red': 3, 'green': 1}",
+          "Step 49: Action: collect | Observation: at (1, 8), cell has empty, nearby: 2R 0G 1A, energy: 22 | Outcome: nothing to collect | Energy: 21 | Inventory: {'red': 3, 'green': 1}",
+          "Step 50: Action: collect | Observation: at (1, 8), cell has empty, nearby: 2R 0G 1A, energy: 21 | Outcome: nothing to collect | Energy: 20 | Inventory: {'red': 3, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent2",
+        "type": "green",
+        "position": [
+          8,
+          2
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 4
+        },
+        "energy": 40,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "move down",
+          "collect",
+          "move left",
+          "do nothing"
+        ],
+        "recent_memories": [
+          "Step 48: Action: collect | Observation: at (8, 3), cell has empty, nearby: 1R 2G 0A, energy: 43 | Outcome: nothing to collect | Energy: 42 | Inventory: {'red': 2, 'green': 4}",
+          "Step 49: Action: move left | Observation: at (8, 3), cell has empty, nearby: 1R 2G 0A, energy: 42 | Outcome: successful move | Energy: 41 | Inventory: {'red': 2, 'green': 4}",
+          "Step 50: Action: do nothing | Observation: at (8, 2), cell has green, nearby: 1R 2G 0A, energy: 41 | Outcome: no action taken | Energy: 40 | Inventory: {'red': 2, 'green': 4}"
+        ]
+      },
+      {
+        "name": "Agent3",
+        "type": "red",
+        "position": [
+          0,
+          8
+        ],
+        "inventory": {
+          "red": 0,
+          "green": 1
+        },
+        "energy": 20,
+        "alive": true,
+        "last_actions": [
+          "do nothing",
+          "move up",
+          "move down",
+          "move down",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 48: Action: do nothing | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 23 | Outcome: no action taken | Energy: 22 | Inventory: {'red': 0, 'green': 1}",
+          "Step 49: Action: failed attempts | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 22 | Outcome: no valid action found | Energy: 21 | Inventory: {'red': 0, 'green': 1}",
+          "Step 50: Action: collect | Observation: at (0, 8), cell has empty, nearby: 1R 0G 1A, energy: 21 | Outcome: nothing to collect | Energy: 20 | Inventory: {'red': 0, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent4",
+        "type": "balanced",
+        "position": [
+          0,
+          1
+        ],
+        "inventory": {
+          "red": 2,
+          "green": 1
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "move up",
+          "do nothing",
+          "move up",
+          "collect"
+        ],
+        "recent_memories": [
+          "Step 17: Action: do nothing | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 4 | Outcome: no action taken | Energy: 3 | Inventory: {'red': 1, 'green': 1}",
+          "Step 18: Action: move up | Observation: at (1, 1), cell has empty, nearby: 2R 4G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 1}",
+          "Step 19: Action: collect | Observation: at (0, 1), cell has red, nearby: 2R 1G 0A, energy: 2 | Outcome: collected red | Energy: 1 | Inventory: {'red': 2, 'green': 1}"
+        ]
+      },
+      {
+        "name": "Agent5",
+        "type": "green",
+        "position": [
+          6,
+          7
+        ],
+        "inventory": {
+          "red": 1,
+          "green": 2
+        },
+        "energy": 0,
+        "alive": false,
+        "last_actions": [
+          "move up",
+          "do nothing",
+          "collect",
+          "move left",
+          "move up"
+        ],
+        "recent_memories": [
+          "Step 17: Action: collect | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 4 | Outcome: nothing to collect | Energy: 3 | Inventory: {'red': 1, 'green': 2}",
+          "Step 18: Action: move left | Observation: at (7, 8), cell has empty, nearby: 0R 0G 0A, energy: 3 | Outcome: successful move | Energy: 2 | Inventory: {'red': 1, 'green': 2}",
+          "Step 19: Action: move up | Observation: at (7, 7), cell has empty, nearby: 2R 0G 1A, energy: 2 | Outcome: successful move | Energy: 1 | Inventory: {'red': 1, 'green': 2}"
+        ]
+      }
+    ],
+    "alive_count": 3
   }
 ]

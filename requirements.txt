@@ -2,3 +2,5 @@ pygame==2.5.2
 openai==1.12.0
 python-dotenv==1.0.0
 matplotlib
+requests==2.31.0
+Pillow==10.0.0

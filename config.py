@@ -56,10 +56,21 @@ ENABLE_DEBUG_OUTPUT = True
 LOG_LLM_CALLS = True
 
 # LLM settings
-LLM_MODEL = "gpt-3.5-turbo"
+LLM_MODEL = "gpt-4o" #"gpt-3.5-turbo"
 LLM_TEMPERATURE = 0.7
 LLM_MAX_TOKENS = 50
 LLM_RETRY_ATTEMPTS = 2
+
+# Local LLM settings
+USE_LOCAL_LLM = True  # Set to True to use local LLM, False for OpenAI
+USE_MULTIMODAL = False  # Set to True to use multimodal model (visual grid perception)
+LOCAL_LLM_MODEL = "phi3" #"tinyllama"  # Ollama model name for text-only
+MULTIMODAL_LLM_MODEL = "llava"  # Ollama model name for multimodal
+LOCAL_LLM_URL = "http://localhost:11434"  # Ollama default URL
+LOCAL_LLM_TIMEOUT = 60  # Timeout in seconds for local LLM requests
+
+# Memory settings
+AGENT_MEMORY_SIZE = 3  # Number of past actions/observations to remember
 
 # Fallback behavior settings
 CRITICAL_ENERGY_THRESHOLD = 5  # Energy level to trigger emergency eating
