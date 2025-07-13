@@ -2,6 +2,7 @@ import random
 # import pygame
 import sys
 import json
+import csv
 from datetime import datetime
 from environment import Environment
 from agent import Agent
@@ -63,58 +64,76 @@ def main():
     print(f"Total agents: {num_agents}")
     print(f"Replenishment: {REPLENISH_RED} red, {REPLENISH_GREEN} green every {REPLENISH_INTERVAL} steps")
 
-    while steps < total_steps and running:
-        # Handle events
-        # for event in pygame.event.get():
-        #     if event.type == pygame.QUIT:
-        #         running = False
-        #     elif event.type == pygame.KEYDOWN:
-        #         if event.key == pygame.K_SPACE:
-        #             paused = not paused
-        #             print(f"\n{'PAUSED' if paused else 'RESUMED'}")
-        #         elif event.key == pygame.K_q:
-        #             running = False
+    # CSV logging setup - real-time logging like Project 2
+    with open("llm_agent_log.csv", "w", newline='') as energy_log, \
+         open("llm_actions_log.csv", "w", newline='') as action_log:
 
-
-        # Count alive agents
-        print(f"\n--- Step {steps + 1} ---")
-        alive_count = sum(1 for agent in agents if agent.alive)
-        print(f"Alive agents: {alive_count}/{num_agents}")
+        energy_writer = csv.writer(energy_log)
+        action_writer = csv.writer(action_log)
         
-        # Agent actions
-        for agent in agents:
-            if agent.alive:
-                action = agent.decide_and_act(env, all_agents=agents)
-                print(f"{agent.name} at {agent.position} (energy: {agent.energy}): {action}")
-        
-        # Check for game over
-        if alive_count == 0:
-            print("\n🎮 GAME OVER - All agents died!")
-            running = False
+        # Write CSV headers
+        energy_writer.writerow(["Step", "Agent", "Energy"])
+        action_writer.writerow(["Step", "Agent", "Action"])
 
-        steps += 1
+        while steps < total_steps and running:
+            # Handle events
+            # for event in pygame.event.get():
+            #     if event.type == pygame.QUIT:
+            #         running = False
+            #     elif event.type == pygame.KEYDOWN:
+            #         if event.key == pygame.K_SPACE:
+            #             paused = not paused
+            #             print(f"\n{'PAUSED' if paused else 'RESUMED'}")
+            #         elif event.key == pygame.K_q:
+            #             running = False
 
-        # Replenish food at intervals
-        if steps % REPLENISH_INTERVAL == 0:
-            print(f"\n🔄 Replenishing {REPLENISH_RED} red and {REPLENISH_GREEN} green at step {steps}...")
-            env.fixed_replenish(red_count=REPLENISH_RED, green_count=REPLENISH_GREEN)
+            # Count alive agents
+            print(f"\n--- Step {steps + 1} ---")
+            alive_count = sum(1 for agent in agents if agent.alive)
+            print(f"Alive agents: {alive_count}/{num_agents}")
+            
+            # Agent actions
+            for agent in agents:
+                if agent.alive:
+                    action = agent.decide_and_act(env, all_agents=agents)
+                    print(f"{agent.name} at {agent.position} (energy: {agent.energy}): {action}")
+                    
+                    # Real-time CSV logging - log energy and actions immediately
+                    energy_writer.writerow([steps + 1, agent.name, agent.energy])
+                    action_writer.writerow([steps + 1, agent.name, action])
+                else:
+                    # Log dead agents too for complete data
+                    energy_writer.writerow([steps + 1, agent.name, 0])
+                    action_writer.writerow([steps + 1, agent.name, "inactive"])
+            
+            # Check for game over
+            if alive_count == 0:
+                print("\n🎮 GAME OVER - All agents died!")
+                running = False
 
-        # Save statistics every 10 steps
-        if steps % 10 == 0:
-            save_game_stats(agents, steps)
+            steps += 1
 
-    # Always update display
-    # draw_grid(screen, env, agents, font, sub_font)
-    
-    # # Show pause indicator
-    # if paused:
-    #     pause_text = font.render("PAUSED", True, (255, 0, 0))
-    #     text_rect = pause_text.get_rect(center=(270, 270))
-    #     pygame.draw.rect(screen, (255, 255, 255), text_rect.inflate(20, 10))
-    #     screen.blit(pause_text, text_rect)
-    #     pygame.display.flip()
-    
-    # clock.tick(FPS)
+            # Replenish food at intervals
+            if steps % REPLENISH_INTERVAL == 0:
+                print(f"\n🔄 Replenishing {REPLENISH_RED} red and {REPLENISH_GREEN} green at step {steps}...")
+                env.fixed_replenish(red_count=REPLENISH_RED, green_count=REPLENISH_GREEN)
+
+            # Save JSON statistics every 10 steps (keep existing functionality)
+            if steps % 10 == 0:
+                save_game_stats(agents, steps)
+
+            # Always update display
+            # draw_grid(screen, env, agents, font, sub_font)
+            
+            # # Show pause indicator
+            # if paused:
+            #     pause_text = font.render("PAUSED", True, (255, 0, 0))
+            #     text_rect = pause_text.get_rect(center=(270, 270))
+            #     pygame.draw.rect(screen, (255, 255, 255), text_rect.inflate(20, 10))
+            #     screen.blit(pause_text, text_rect)
+            #     pygame.display.flip()
+            
+            # clock.tick(FPS)
 
     # Final statistics
     print("\n=== SIMULATION COMPLETE ===")
@@ -125,7 +144,9 @@ def main():
     save_game_stats(agents, steps, "final_stats.json")
     
     # pygame.quit()
-    print("\nSimulation data saved to game_stats.json and final_stats.json")
+    print("\nSimulation data saved to:")
+    print("- game_stats.json and final_stats.json (existing JSON format)")
+    print("- llm_agent_log.csv and llm_actions_log.csv (new real-time CSV format)")
 
 if __name__ == "__main__":
     main()

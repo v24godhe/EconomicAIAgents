@@ -110,36 +110,65 @@ def get_agent_action(
     grid_image_base64=None,
     retry_message=None,
 ):
-    # Build memory context
-    memory_context = ""
+    # Convert Project 1's memory system to Project 2's movement history format
+    history_section = ""
     if memory and len(memory) > 0:
-        memory_context = ""
-        for i, mem in enumerate(memory[-AGENT_MEMORY_SIZE:], 1):
-            memory_context += f"{i}. {mem}\n"
-    else:
-        memory_context = "None"
+        # Extract movement info from Project 1's memory entries to create Project 2 style history
+        formatted_entries = []
+        for mem in memory[-3:]:  # Last 3 memories
+            # Parse memory format: "Step X: Action: Y | Observation: Z | Outcome: W | Energy: E | Inventory: I"
+            if "Step " in mem and "Action:" in mem:
+                try:
+                    step_part = mem.split("Step ")[1].split(":")[0]
+                    action_part = mem.split("Action: ")[1].split(" | ")[0]
+                    if "Observation:" in mem:
+                        obs_part = mem.split("Observation: ")[1].split(" | ")[0]
+                        # Extract position and cell content from observation
+                        if "at (" in obs_part:
+                            pos_part = obs_part.split("at ")[1].split(",")[0] + "," + obs_part.split(", ")[1].split(")")[0] + ")"
+                            cell_part = obs_part.split("cell has ")[1].split(",")[0] if "cell has " in obs_part else "unknown"
+                            formatted_entries.append(f"- Step {step_part}: At {pos_part} | Found: {cell_part} | Action: {action_part}")
+                except:
+                    # If parsing fails, use a simplified format
+                    formatted_entries.append(f"- {mem[:50]}...")
+        
+        if formatted_entries:
+            history_section = f"\n📜 Your recent actions:\n" + "\n".join(formatted_entries) + "\n"
 
-    # Build emoji-rich prompt
-    base_prompt = f"""You are 🤖 Agent {agent_name} at position {position} on a 9x9 grid.
-Your current energy is {energy} ⚡. You lose 1 ⚡ each step.
-Your inventory: {inventory}
-The cell you are on contains: {cell_content if cell_content else 'nothing'}.
+    # Project 2's enhanced prompt structure
+    base_prompt = f"""🧠 Agent Status Report: {agent_name}
+📍 Position: {position} on a 9x9 grid
+⚡ Energy Level: {energy} (you lose 1 energy every step)
+🎒 Inventory: {inventory}
+🍽️ Consumption Rate: {consumption_rate}. — Give priority to eat the food that gives you the most energy according to consumption rate.
+📦 Current Cell Contents: {cell_content if cell_content else 'nothing'}
+{f"✅ You can collect the {cell_content} food here." if cell_content in ['red', 'green'] else ""}
 
-🍎 Red food gives you {consumption_rate.get('red', 0)} ⚡.
-🥦 Green food gives you {consumption_rate.get('green', 0)} ⚡.
+{history_section}
 
-Your recent memories:
-{memory_context}
+🧭 Strategy Tips:
+- Collect food if it's available.
+- Eat if you have food available or your energy is low.
+- Move in all directions (up, down, left, right) to find food — the grid is 9x9.
+- Avoid wasting turns — survive as long as possible!
 
-You can do ONE of the following actions (reply with just the action):
-- 🚶 Move: 'move up', 'move down', 'move left', 'move right'
-- 🍽️ Collect food at your cell: 'collect'
-- 🍴 Eat food from your inventory: 'eat red' or 'eat green'
-- 😴 Do nothing: 'do nothing'
+🧭 Movement Tips:
+- Based on your recent actions above, try to make a smart decision.
+- Avoid repeating moves that led to empty cells or no gain.
+- Change your direction if move is blocked.
+- Explore unvisited or promising directions based on your recent outcomes.
+- Learn from past actions: if moving in one direction wasn't useful, try a different one.
 
-🎯 Goal: Stay alive as long as possible by collecting and eating food to keep your energy above 0. Prioritize actions that maximize your survival.
+🚨 PRIORITY: 🔺 Don't forget to eat food to maintain energy levels.
 
-Reply with only one valid action from the list above."""
+🎮 Valid Actions (choose one only):
+- Move → 'move up', 'move down', 'move left', 'move right'
+- Collect food → 'collect'
+- Eat → 'eat red', 'eat green'
+- Take a break → 'do nothing' (not recommended if you can act)
+
+🎯 Decision Rule:
+Reply with only **one valid action** exactly as described above. No explanation or reasoning."""
 
     # Add visual context if multimodal
     if USE_MULTIMODAL and grid_image_base64:
@@ -196,4 +225,4 @@ Use this visual information along with the text description to make your decisio
             return valid
 
     # Default fallback
-    return
+    return "do nothing"

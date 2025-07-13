@@ -1,6 +1,7 @@
 from llm import get_agent_action
 from config import AGENT_MEMORY_SIZE, USE_MULTIMODAL
 from pygame_visualization import render_grid_for_agent, surface_to_base64
+import json
 
 class Agent:
     def __init__(self, name, start_pos=(4, 4)):
@@ -13,6 +14,7 @@ class Agent:
         self.actions_taken = []  # Track history for debugging
         self.memory = []  # Store recent memories for LLM context
         self.step_count = 0
+        self.movement_history = []  # Individual movement history like Project 2
 
     def get_agent_type(self):
         """Determine agent type based on consumption rates"""
@@ -54,6 +56,30 @@ class Agent:
         # Keep only last N memories
         if len(self.memory) > AGENT_MEMORY_SIZE:
             self.memory = self.memory[-AGENT_MEMORY_SIZE:]
+
+    def update_movement_history(self, cell_content, action_taken):
+        """Update individual movement history like Project 2"""
+        history_entry = {
+            "step": self.step_count,
+            "position": self.position,
+            "cell_content": cell_content if cell_content else "empty",
+            "action_taken": action_taken
+        }
+        
+        self.movement_history.append(history_entry)
+        
+        # Keep only last 3 movements
+        if len(self.movement_history) > 3:
+            self.movement_history.pop(0)
+        
+        # Save to individual file like Project 2
+        self.save_movement_history_to_file()
+
+    def save_movement_history_to_file(self):
+        """Save movement history to individual agent file"""
+        filename = f"movement_history_{self.name}.txt"
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(self.movement_history, f, indent=4)
     
     def get_current_observation(self, environment, all_agents):
         """Generate current observation for memory"""
@@ -138,6 +164,7 @@ class Agent:
                 if moved:
                     action_result = f"moved {direction} (energy: {self.energy})"
                     self.add_memory(current_observation, action, "successful move")
+                    self.update_movement_history(cell, action_result)
                     return action_result
                 else:
                     retry_message = f"your move {direction} was blocked"
@@ -147,6 +174,7 @@ class Agent:
                 result = self.collect(environment)
                 action_result = result
                 self.add_memory(current_observation, action, result)
+                self.update_movement_history(cell, result)
                 return result
 
             elif action == "eat red" and self.inventory['red'] > 0:
@@ -154,6 +182,7 @@ class Agent:
                 self.energy += self.consumption_rates['red']
                 action_result = f"ate red (+{self.consumption_rates['red']} energy)"
                 self.add_memory(current_observation, action, f"gained {self.consumption_rates['red']} energy")
+                self.update_movement_history(cell, action_result)
                 return action_result
 
             elif action == "eat green" and self.inventory['green'] > 0:
@@ -161,17 +190,20 @@ class Agent:
                 self.energy += self.consumption_rates['green']
                 action_result = f"ate green (+{self.consumption_rates['green']} energy)"
                 self.add_memory(current_observation, action, f"gained {self.consumption_rates['green']} energy")
+                self.update_movement_history(cell, action_result)
                 return action_result
 
             elif action == "do nothing":
                 action_result = "did nothing"
                 self.add_memory(current_observation, action, "no action taken")
+                self.update_movement_history(cell, action_result)
                 return action_result
             
             # Handle trade actions if trade_manager is provided
             elif action.startswith("trade") and trade_manager:
                 action_result = self.handle_trade(action, trade_manager, all_agents)
                 self.add_memory(current_observation, action, action_result)
+                self.update_movement_history(cell, action_result)
                 return action_result
 
             else:
@@ -180,6 +212,7 @@ class Agent:
 
         # If we get here, both attempts failed
         self.add_memory(current_observation, "failed attempts", "no valid action found")
+        self.update_movement_history(cell, "failed to act")
         return "failed to act"
 
     def handle_trade(self, action, trade_manager, all_agents):

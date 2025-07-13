@@ -18,6 +18,7 @@ AGENT_CONFIGS = {
     "Agent5": {'red': 0, 'green': 50},     # Green specialist
 }
 
+CONSUPTING_RATE = 0,1
 # Game mechanics
 ENERGY_LOSS_PER_TURN = 1
 REPLENISH_INTERVAL = 20  # Steps between food replenishment
