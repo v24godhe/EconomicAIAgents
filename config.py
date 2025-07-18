@@ -9,8 +9,14 @@ NUM_AGENTS = 5
 INITIAL_ENERGY = 20
 INITIAL_INVENTORY = {'red': 1, 'green': 1}
 
+
+# NEW: Consumption rate study parameters
+CONSUMPTION_RATE = 1.0 
+CONSUMPTION_RATES = [0.8, 0.9, 1.0, 1.1, 1.2]
+STUDY_RUNS_PER_RATE = 3  
+
 # Agent consumption rates (energy gained from eating)
-AGENT_CONFIGS = {
+AGENT_BASE_CONFIGS = {
     "Agent1": {'red': 50, 'green': 0},     # Red specialist
     "Agent2": {'red': 20, 'green': 30},    # Green preference
     "Agent3": {'red': 30, 'green': 20},    # Red preference
@@ -18,7 +24,17 @@ AGENT_CONFIGS = {
     "Agent5": {'red': 0, 'green': 50},     # Green specialist
 }
 
-# CONSUMPTION_RATE = 0,1
+
+AGENT_CONFIGS = {
+    agent: {
+        'red': int(rates['red'] * CONSUMPTION_RATE),
+        'green': int(rates['green'] * CONSUMPTION_RATE)
+    }
+    for agent, rates in AGENT_BASE_CONFIGS.items()
+}
+
+
+
 # Game mechanics
 ENERGY_LOSS_PER_TURN = 1
 REPLENISH_INTERVAL = 20  # Steps between food replenishment

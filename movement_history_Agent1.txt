@@ -1,11 +1,29 @@
 [
   {
-    "step": 1,
+    "step": 2,
     "position": [
-      7,
-      7
+      0,
+      5
+    ],
+    "cell_content": "empty",
+    "action_taken": "moved left (energy: 68)"
+  },
+  {
+    "step": 3,
+    "position": [
+      0,
+      5
     ],
     "cell_content": "green",
-    "action_taken": "did nothing"
+    "action_taken": "collected green"
+  },
+  {
+    "step": 4,
+    "position": [
+      0,
+      6
+    ],
+    "cell_content": "empty",
+    "action_taken": "moved right (energy: 66)"
   }
 ]

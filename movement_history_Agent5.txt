@@ -1,29 +1,29 @@
 [
   {
-    "step": 17,
+    "step": 1,
     "position": [
-      4,
-      1
+      8,
+      2
     ],
     "cell_content": "empty",
-    "action_taken": "did nothing"
+    "action_taken": "ate green (+50)"
   },
   {
-    "step": 18,
+    "step": 2,
     "position": [
-      4,
-      1
+      7,
+      2
     ],
     "cell_content": "empty",
-    "action_taken": "did nothing"
+    "action_taken": "moved up (energy: 68)"
   },
   {
-    "step": 19,
+    "step": 3,
     "position": [
-      4,
-      1
+      7,
+      2
     ],
-    "cell_content": "empty",
-    "action_taken": "did nothing"
+    "cell_content": "red",
+    "action_taken": "collected red"
   }
 ]

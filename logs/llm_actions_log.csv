@@ -1,3 +1,364 @@
 Step,Agent,Action
-1,Agent1,did nothing
-1,Agent2,did nothing
+1,Agent1,ate red (+50)
+1,Agent2,collected green
+1,Agent3,collected green
+1,Agent4,collected red
+1,Agent5,ate green (+50)
+2,Agent1,moved up (energy: 68)
+2,Agent2,ate green (+30)
+2,Agent3,ate red (+30)
+2,Agent4,ate red (+25)
+2,Agent5,moved left (energy: 68)
+3,Agent1,moved down (energy: 67)
+3,Agent2,moved up (energy: 47)
+3,Agent3,ate green (+20)
+3,Agent4,moved right (energy: 42)
+3,Agent5,collected green
+4,Agent1,moved up (energy: 66)
+4,Agent2,collected red
+4,Agent3,moved up (energy: 66)
+4,Agent4,collected green
+4,Agent5,ate green (+50)
+5,Agent1,moved right (energy: 65)
+5,Agent2,ate green (+30)
+5,Agent3,moved right (energy: 65)
+5,Agent4,ate red (+25)
+5,Agent5,moved right (energy: 115)
+6,Agent1,collected red
+6,Agent2,moved up (energy: 74)
+6,Agent3,moved right (energy: 64)
+6,Agent4,moved down (energy: 64)
+6,Agent5,moved down (energy: 114)
+7,Agent1,ate red (+50)
+7,Agent2,collected red
+7,Agent3,collected red
+7,Agent4,ate green (+25)
+7,Agent5,collected green
+8,Agent1,moved right (energy: 112)
+8,Agent2,moved right (energy: 72)
+8,Agent3,ate red (+30)
+8,Agent4,moved right (energy: 87)
+8,Agent5,ate green (+50)
+9,Agent1,moved right (energy: 111)
+9,Agent2,collected red
+9,Agent3,moved down (energy: 91)
+9,Agent4,collected green
+9,Agent5,move blocked
+10,Agent1,moved down (energy: 110)
+10,Agent2,ate red (+20)
+10,Agent3,collected green
+10,Agent4,moved right (energy: 85)
+10,Agent5,moved up (energy: 160)
+11,Agent1,moved down (energy: 109)
+11,Agent2,moved right (energy: 89)
+11,Agent3,ate green (+20)
+11,Agent4,collected red
+11,Agent5,move blocked
+12,Agent1,collected red
+12,Agent2,collected green
+12,Agent3,moved right (energy: 108)
+12,Agent4,ate green (+25)
+12,Agent5,moved down (energy: 158)
+13,Agent1,ate red (+50)
+13,Agent2,moved right (energy: 87)
+13,Agent3,collected green
+13,Agent4,moved up (energy: 107)
+13,Agent5,moved down (energy: 157)
+14,Agent1,moved up (energy: 156)
+14,Agent2,collected red
+14,Agent3,moved down (energy: 106)
+14,Agent4,collected red
+14,Agent5,collected green
+15,Agent1,moved left (energy: 155)
+15,Agent2,ate green (+30)
+15,Agent3,collected red
+15,Agent4,ate red (+25)
+15,Agent5,ate green (+50)
+16,Agent1,moved right (energy: 154)
+16,Agent2,moved right (energy: 114)
+16,Agent3,ate red (+30)
+16,Agent4,moved down (energy: 129)
+16,Agent5,move blocked
+17,Agent1,moved left (energy: 153)
+17,Agent2,ate red (+20)
+17,Agent3,moved left (energy: 133)
+17,Agent4,move blocked
+17,Agent5,moved up (energy: 203)
+18,Agent1,moved right (energy: 152)
+18,Agent2,moved right (energy: 132)
+18,Agent3,collected red
+18,Agent4,moved left (energy: 127)
+18,Agent5,moved left (energy: 202)
+19,Agent1,moved left (energy: 151)
+19,Agent2,move blocked
+19,Agent3,ate green (+20)
+19,Agent4,ate red (+25)
+19,Agent5,moved up (energy: 201)
+20,Agent1,moved right (energy: 150)
+20,Agent2,moved left (energy: 130)
+20,Agent3,nothing to collect
+20,Agent4,moved up (energy: 150)
+20,Agent5,moved right (energy: 200)
+21,Agent1,moved right (energy: 149)
+21,Agent2,collected red
+21,Agent3,collected red
+21,Agent4,collected red
+21,Agent5,ate red (+0)
+22,Agent1,collected green
+22,Agent2,ate red (+20)
+22,Agent3,ate red (+30)
+22,Agent4,moved left (energy: 148)
+22,Agent5,moved left (energy: 198)
+23,Agent1,ate green (+0)
+23,Agent2,moved right (energy: 147)
+23,Agent3,nothing to collect
+23,Agent4,ate red (+25)
+23,Agent5,moved right (energy: 197)
+24,Agent1,moved left (energy: 146)
+24,Agent2,collected green
+24,Agent3,ate red (+30)
+24,Agent4,moved right (energy: 171)
+24,Agent5,moved left (energy: 196)
+25,Agent1,moved up (energy: 145)
+25,Agent2,moved right (energy: 145)
+25,Agent3,moved down (energy: 205)
+25,Agent4,move blocked
+25,Agent5,moved right (energy: 195)
+26,Agent1,moved up (energy: 144)
+26,Agent2,ate green (+30)
+26,Agent3,collected red
+26,Agent4,moved right (energy: 169)
+26,Agent5,moved left (energy: 194)
+27,Agent1,collected green
+27,Agent2,moved right (energy: 173)
+27,Agent3,ate red (+30)
+27,Agent4,collected red
+27,Agent5,moved right (energy: 193)
+28,Agent1,ate green (+0)
+28,Agent2,moved right (energy: 172)
+28,Agent3,moved right (energy: 232)
+28,Agent4,ate red (+25)
+28,Agent5,move blocked
+29,Agent1,moved right (energy: 141)
+29,Agent2,ate red (+20)
+29,Agent3,collected green
+29,Agent4,moved up (energy: 191)
+29,Agent5,move blocked
+30,Agent1,moved left (energy: 140)
+30,Agent2,moved left (energy: 190)
+30,Agent3,ate green (+20)
+30,Agent4,moved left (energy: 190)
+30,Agent5,moved down (energy: 190)
+31,Agent1,moved down (energy: 139)
+31,Agent2,moved left (energy: 189)
+31,Agent3,moved left (energy: 249)
+31,Agent4,collected green
+31,Agent5,move blocked
+32,Agent1,moved right (energy: 138)
+32,Agent2,moved left (energy: 188)
+32,Agent3,moved left (energy: 248)
+32,Agent4,ate green (+25)
+32,Agent5,moved up (energy: 188)
+33,Agent1,moved up (energy: 137)
+33,Agent2,moved up (energy: 187)
+33,Agent3,moved up (energy: 247)
+33,Agent4,moved right (energy: 212)
+33,Agent5,move blocked
+34,Agent1,moved right (energy: 136)
+34,Agent2,moved left (energy: 186)
+34,Agent3,ate green (+20)
+34,Agent4,move blocked
+34,Agent5,move blocked
+35,Agent1,collected green
+35,Agent2,moved up (energy: 185)
+35,Agent3,moved up (energy: 265)
+35,Agent4,moved left (energy: 210)
+35,Agent5,move blocked
+36,Agent1,ate green (+0)
+36,Agent2,moved left (energy: 184)
+36,Agent3,moved left (energy: 264)
+36,Agent4,moved down (energy: 209)
+36,Agent5,moved down (energy: 184)
+37,Agent1,moved left (energy: 133)
+37,Agent2,collected red
+37,Agent3,moved right (energy: 263)
+37,Agent4,ate green (+25)
+37,Agent5,moved down (energy: 183)
+38,Agent1,moved left (energy: 132)
+38,Agent2,ate red (+20)
+38,Agent3,moved right (energy: 262)
+38,Agent4,moved right (energy: 232)
+38,Agent5,moved left (energy: 182)
+39,Agent1,moved right (energy: 131)
+39,Agent2,moved right (energy: 201)
+39,Agent3,moved up (energy: 261)
+39,Agent4,moved right (energy: 231)
+39,Agent5,moved right (energy: 181)
+40,Agent1,moved right (energy: 130)
+40,Agent2,moved right (energy: 200)
+40,Agent3,moved down (energy: 260)
+40,Agent4,move blocked
+40,Agent5,move blocked
+41,Agent1,moved left (energy: 129)
+41,Agent2,collected red
+41,Agent3,collected green
+41,Agent4,moved left (energy: 229)
+41,Agent5,moved down (energy: 179)
+42,Agent1,moved up (energy: 128)
+42,Agent2,ate red (+20)
+42,Agent3,ate green (+20)
+42,Agent4,moved down (energy: 228)
+42,Agent5,collected green
+43,Agent1,collected red
+43,Agent2,moved right (energy: 217)
+43,Agent3,moved right (energy: 277)
+43,Agent4,moved left (energy: 227)
+43,Agent5,ate green (+50)
+44,Agent1,ate red (+50)
+44,Agent2,moved right (energy: 216)
+44,Agent3,collected red
+44,Agent4,move blocked
+44,Agent5,moved left (energy: 226)
+45,Agent1,moved down (energy: 175)
+45,Agent2,collected green
+45,Agent3,ate red (+30)
+45,Agent4,moved right (energy: 225)
+45,Agent5,collected green
+46,Agent1,moved down (energy: 174)
+46,Agent2,ate green (+30)
+46,Agent3,moved down (energy: 304)
+46,Agent4,moved up (energy: 224)
+46,Agent5,moved down (energy: 224)
+47,Agent1,moved up (energy: 173)
+47,Agent2,moved left (energy: 243)
+47,Agent3,collected green
+47,Agent4,moved left (energy: 223)
+47,Agent5,ate green (+50)
+48,Agent1,move blocked
+48,Agent2,moved right (energy: 242)
+48,Agent3,moved down (energy: 302)
+48,Agent4,moved down (energy: 222)
+48,Agent5,moved right (energy: 272)
+49,Agent1,moved left (energy: 171)
+49,Agent2,move blocked
+49,Agent3,ate green (+20)
+49,Agent4,moved right (energy: 221)
+49,Agent5,collected red
+50,Agent1,moved down (energy: 170)
+50,Agent2,moved down (energy: 240)
+50,Agent3,moved left (energy: 320)
+50,Agent4,moved right (energy: 220)
+50,Agent5,moved left (energy: 270)
+51,Agent1,moved up (energy: 169)
+51,Agent2,moved right (energy: 239)
+51,Agent3,moved up (energy: 319)
+51,Agent4,moved left (energy: 219)
+51,Agent5,ate red (+0)
+52,Agent1,moved right (energy: 168)
+52,Agent2,ate red (+20)
+52,Agent3,moved up (energy: 318)
+52,Agent4,moved up (energy: 218)
+52,Agent5,moved up (energy: 268)
+53,Agent1,moved left (energy: 167)
+53,Agent2,move blocked
+53,Agent3,moved up (energy: 317)
+53,Agent4,move blocked
+53,Agent5,moved left (energy: 267)
+54,Agent1,ate green (+0)
+54,Agent2,moved down (energy: 256)
+54,Agent3,moved up (energy: 316)
+54,Agent4,moved right (energy: 216)
+54,Agent5,moved down (energy: 266)
+55,Agent1,move blocked
+55,Agent2,move blocked
+55,Agent3,moved down (energy: 315)
+55,Agent4,moved up (energy: 215)
+55,Agent5,moved right (energy: 265)
+56,Agent1,moved up (energy: 164)
+56,Agent2,ate red (+20)
+56,Agent3,moved right (energy: 314)
+56,Agent4,moved left (energy: 214)
+56,Agent5,moved down (energy: 264)
+57,Agent1,collected red
+57,Agent2,move blocked
+57,Agent3,move blocked
+57,Agent4,moved down (energy: 213)
+57,Agent5,move blocked
+58,Agent1,ate red (+50)
+58,Agent2,moved left (energy: 272)
+58,Agent3,moved down (energy: 312)
+58,Agent4,moved right (energy: 212)
+58,Agent5,moved up (energy: 262)
+59,Agent1,moved down (energy: 211)
+59,Agent2,moved down (energy: 271)
+59,Agent3,moved left (energy: 311)
+59,Agent4,move blocked
+59,Agent5,moved left (energy: 261)
+60,Agent1,moved left (energy: 210)
+60,Agent2,moved right (energy: 270)
+60,Agent3,moved up (energy: 310)
+60,Agent4,moved up (energy: 210)
+60,Agent5,moved up (energy: 260)
+61,Agent1,collected green
+61,Agent2,moved up (energy: 269)
+61,Agent3,moved up (energy: 309)
+61,Agent4,collected green
+61,Agent5,moved down (energy: 259)
+62,Agent1,ate green (+0)
+62,Agent2,moved left (energy: 268)
+62,Agent3,collected green
+62,Agent4,ate green (+25)
+62,Agent5,moved up (energy: 258)
+63,Agent1,moved up (energy: 207)
+63,Agent2,moved down (energy: 267)
+63,Agent3,ate green (+20)
+63,Agent4,moved down (energy: 232)
+63,Agent5,move blocked
+64,Agent1,collected green
+64,Agent2,move blocked
+64,Agent3,moved right (energy: 326)
+64,Agent4,collected green
+64,Agent5,moved down (energy: 256)
+65,Agent1,moved up (energy: 205)
+65,Agent2,moved up (energy: 265)
+65,Agent3,moved up (energy: 325)
+65,Agent4,moved up (energy: 230)
+65,Agent5,moved left (energy: 255)
+66,Agent1,collected red
+66,Agent2,moved left (energy: 264)
+66,Agent3,moved left (energy: 324)
+66,Agent4,ate green (+25)
+66,Agent5,collected red
+67,Agent1,ate red (+50)
+67,Agent2,moved down (energy: 263)
+67,Agent3,moved down (energy: 323)
+67,Agent4,moved left (energy: 253)
+67,Agent5,ate red (+0)
+68,Agent1,moved up (energy: 252)
+68,Agent2,moved right (energy: 262)
+68,Agent3,moved right (energy: 322)
+68,Agent4,moved right (energy: 252)
+68,Agent5,moved right (energy: 252)
+69,Agent1,moved down (energy: 251)
+69,Agent2,moved up (energy: 261)
+69,Agent3,moved up (energy: 321)
+69,Agent4,moved left (energy: 251)
+69,Agent5,moved down (energy: 251)
+70,Agent1,moved up (energy: 250)
+70,Agent2,moved left (energy: 260)
+70,Agent3,moved left (energy: 320)
+70,Agent4,moved right (energy: 250)
+70,Agent5,moved right (energy: 250)
+71,Agent1,moved down (energy: 249)
+71,Agent2,moved down (energy: 259)
+71,Agent3,moved down (energy: 319)
+71,Agent4,moved down (energy: 249)
+71,Agent5,moved right (energy: 249)
+72,Agent1,moved right (energy: 248)
+72,Agent2,moved right (energy: 258)
+72,Agent3,moved right (energy: 318)
+72,Agent4,moved up (energy: 248)
+72,Agent5,move blocked
+73,Agent1,moved up (energy: 247)
+73,Agent2,moved up (energy: 257)
+73,Agent3,moved up (energy: 317)
