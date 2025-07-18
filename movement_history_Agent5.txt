@@ -1,0 +1,29 @@
+[
+  {
+    "step": 17,
+    "position": [
+      4,
+      1
+    ],
+    "cell_content": "empty",
+    "action_taken": "did nothing"
+  },
+  {
+    "step": 18,
+    "position": [
+      4,
+      1
+    ],
+    "cell_content": "empty",
+    "action_taken": "did nothing"
+  },
+  {
+    "step": 19,
+    "position": [
+      4,
+      1
+    ],
+    "cell_content": "empty",
+    "action_taken": "did nothing"
+  }
+]

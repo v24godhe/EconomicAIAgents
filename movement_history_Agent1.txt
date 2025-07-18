@@ -1,0 +1,11 @@
+[
+  {
+    "step": 1,
+    "position": [
+      7,
+      7
+    ],
+    "cell_content": "green",
+    "action_taken": "did nothing"
+  }
+]

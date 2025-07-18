@@ -1,141 +1,119 @@
 import os
-import requests
 import json
+import time
+import requests
 from dotenv import load_dotenv
 from openai import OpenAI
 from config import (
-    USE_LOCAL_LLM, USE_MULTIMODAL, LOCAL_LLM_MODEL, MULTIMODAL_LLM_MODEL,
-    LOCAL_LLM_URL, LOCAL_LLM_TIMEOUT, AGENT_MEMORY_SIZE
+    USE_LOCAL_LLM,
+    USE_MULTIMODAL,
+    LOCAL_LLM_MODEL,
+    MULTIMODAL_LLM_MODEL,
+    LOCAL_LLM_URL,
+    LOCAL_LLM_TIMEOUT,
+    LLM_MODEL,
+    LLM_TEMPERATURE,
+    LLM_MAX_TOKENS,
+    LLM_RETRY_ATTEMPTS
 )
 
+# Load OpenAI key
 load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')
+api_key = os.getenv("OPENAI_API_KEY")
 
 LOG_FILE = "llm_logs.txt"
 
-def log(prompt, response):
+
+def log(prompt: str, response: str):
     with open(LOG_FILE, "a", encoding="utf-8") as f:
-        f.write("\n" + "="*40 + "\n")
-        f.write("Prompt:\n" + prompt.strip() + "\n")
+        f.write("\n" + "=" * 40 + "\n")
+        f.write("Prompt:\n" + prompt.strip() + "\n\n")
         f.write("Response:\n" + response.strip() + "\n")
 
-def call_local_llm(prompt):
-    """Call local LLM via Ollama API"""
-    try:
-        payload = {
-            "model": LOCAL_LLM_MODEL,
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.7,
-                "num_predict": 50,
-                "stop": ["\n", ".", "Action:"]
-            }
+
+def call_local_llm(prompt: str) -> str | None:
+    payload = {
+        "model": LOCAL_LLM_MODEL,
+        "prompt": prompt,
+        "stream": False,
+        "options": {
+            "temperature": LLM_TEMPERATURE,
+            "num_predict": LLM_MAX_TOKENS,
+            "stop": ["\n", ".", "Action:"]
         }
-        response = requests.post(
+    }
+    try:
+        resp = requests.post(
             f"{LOCAL_LLM_URL}/api/generate",
             json=payload,
             timeout=LOCAL_LLM_TIMEOUT
         )
-        if response.status_code == 200:
-            result = response.json()
-            return result.get('response', '').strip()
-        else:
-            print(f"Local LLM error: HTTP {response.status_code}")
-            return None
-    except requests.exceptions.ConnectionError:
-        print("Cannot connect to local LLM. Make sure Ollama is running.")
-        return None
-    except requests.exceptions.Timeout:
-        print("Local LLM request timed out.")
-        return None
-    except Exception as e:
-        print(f"Local LLM error: {str(e)}")
-        return None
+        if resp.status_code == 200:
+            return resp.json().get("response", "").strip()
+    except Exception:
+        pass
+    return None
 
-def call_multimodal_llm(prompt, image_base64):
-    """Call multimodal LLM (LLaVA) via Ollama API with image input"""
-    try:
-        payload = {
-            "model": MULTIMODAL_LLM_MODEL,
-            "prompt": prompt,
-            "images": [image_base64],
-            "stream": False,
-            "options": {
-                "temperature": 0.7,
-                "num_predict": 50,
-                "stop": ["\n", ".", "Action:"]
-            }
+
+def call_multimodal_llm(prompt: str, image_base64: str) -> str | None:
+    payload = {
+        "model": MULTIMODAL_LLM_MODEL,
+        "prompt": prompt,
+        "images": [image_base64],
+        "stream": False,
+        "options": {
+            "temperature": LLM_TEMPERATURE,
+            "num_predict": LLM_MAX_TOKENS,
+            "stop": ["\n", ".", "Action:"]
         }
-        response = requests.post(
+    }
+    try:
+        resp = requests.post(
             f"{LOCAL_LLM_URL}/api/generate",
             json=payload,
             timeout=LOCAL_LLM_TIMEOUT
         )
-        if response.status_code == 200:
-            result = response.json()
-            return result.get('response', '').strip()
-        else:
-            print(f"Multimodal LLM error: HTTP {response.status_code}")
-            return None
-    except Exception as e:
-        print(f"Multimodal LLM error: {str(e)}")
-        return None
+        if resp.status_code == 200:
+            return resp.json().get("response", "").strip()
+    except Exception:
+        pass
+    return None
 
-def call_openai_llm(prompt):
-    """Call OpenAI API"""
-    try:
-        client = OpenAI(api_key=api_key)
-        response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
-            messages=[
-                {"role": "user", "content": prompt}
-            ],
-            max_tokens=50,
-            temperature=0.7
-        )
-        return response.choices[0].message.content.strip().lower()
-    except Exception as e:
-        print(f"OpenAI API error: {str(e)}")
-        return None
+
+def call_openai_llm(prompt: str) -> str | None:
+    client = OpenAI(api_key=api_key)
+    for attempt in range(LLM_RETRY_ATTEMPTS):
+        try:
+            resp = client.chat.completions.create(
+                model=LLM_MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=LLM_TEMPERATURE,
+                max_tokens=LLM_MAX_TOKENS
+            )
+            return resp.choices[0].message.content.strip()
+        except Exception:
+            time.sleep(0.5)
+    return None
+
 
 def get_agent_action(
-    agent_name,
-    position,
-    inventory,
-    cell_content,
-    energy,
-    consumption_rate,
-    memory=None,
-    grid_image_base64=None,
-    retry_message=None,
-):
-    # Convert Project 1's memory system to Project 2's movement history format
+    agent_name: str,
+    position: tuple[int, int],
+    inventory: dict,
+    cell_content: str | None,
+    energy: int,
+    consumption_rate: dict,
+    memory: list[str] | None = None,
+    grid_image_base64: str | None = None,
+    retry_message: str | None = None
+) -> str:
+    # Build recent-memory section
     history_section = ""
-    if memory and len(memory) > 0:
-        # Extract movement info from Project 1's memory entries to create Project 2 style history
-        formatted_entries = []
-        for mem in memory[-3:]:  # Last 3 memories
-            # Parse memory format: "Step X: Action: Y | Observation: Z | Outcome: W | Energy: E | Inventory: I"
-            if "Step " in mem and "Action:" in mem:
-                try:
-                    step_part = mem.split("Step ")[1].split(":")[0]
-                    action_part = mem.split("Action: ")[1].split(" | ")[0]
-                    if "Observation:" in mem:
-                        obs_part = mem.split("Observation: ")[1].split(" | ")[0]
-                        # Extract position and cell content from observation
-                        if "at (" in obs_part:
-                            pos_part = obs_part.split("at ")[1].split(",")[0] + "," + obs_part.split(", ")[1].split(")")[0] + ")"
-                            cell_part = obs_part.split("cell has ")[1].split(",")[0] if "cell has " in obs_part else "unknown"
-                            formatted_entries.append(f"- Step {step_part}: At {pos_part} | Found: {cell_part} | Action: {action_part}")
-                except:
-                    # If parsing fails, use a simplified format
-                    formatted_entries.append(f"- {mem[:50]}...")
-        
-        if formatted_entries:
-            history_section = f"\n📜 Your recent actions:\n" + "\n".join(formatted_entries) + "\n"
+    if memory:
+        entries = memory[-3:]
+        history_section = "📜 Recent memory:\n" + "\n".join(f"- {e}" for e in entries) + "\n\n"
 
-    # Project 2's enhanced prompt structure
+    # Core prompt (exact text as requested)
     base_prompt = f"""🧠 Agent Status Report: {agent_name}
 📍 Position: {position} on a 9x9 grid
 ⚡ Energy Level: {energy} (you lose 1 energy every step)
@@ -170,10 +148,15 @@ def get_agent_action(
 🎯 Decision Rule:
 Reply with only **one valid action** exactly as described above. No explanation or reasoning."""
 
-    # Add visual context if multimodal
+    prompt = base_prompt
+
+    # Include retry note if needed
+    if retry_message:
+        prompt += f"\n⚠️ Note: Previous failed because: {retry_message}. Try something different.\n"
+
+    # Prepend visual instructions for multimodal
     if USE_MULTIMODAL and grid_image_base64:
-        visual_prompt = f"""
-Look at the image showing the grid around you. In the image:
+        visual_part = """Look at the image showing the grid around you. In the image:
 - 🍎 Red circles = red food
 - 🥦 Green circles = green food  
 - ⚪ Gray circles = other agents
@@ -181,48 +164,41 @@ Look at the image showing the grid around you. In the image:
 - ⬜ White squares = empty cells
 
 Use this visual information along with the text description to make your decision.
+"""
+        prompt = visual_part + "\n" + base_prompt
 
-{base_prompt}"""
-        prompt = visual_prompt
-    else:
-        prompt = base_prompt
+    action: str | None = None
 
-    if retry_message:
-        prompt += f"\n⚠️ Note: Your previous action failed because: {retry_message}. Try something different."
-
-    # Try multimodal LLM first if enabled and image available
-    action = None
-    if USE_MULTIMODAL and grid_image_base64 and USE_LOCAL_LLM:
+    # 1) Multimodal local
+    if USE_LOCAL_LLM and USE_MULTIMODAL and grid_image_base64:
         action = call_multimodal_llm(prompt, grid_image_base64)
         if action:
-            action = action.lower()
-            log(prompt, f"[MULTIMODAL LLM] {action}")
+            log(prompt, "[LOCAL MULTI] " + action)
 
-    # Try local text LLM if multimodal failed or not enabled
+    # 2) Text-only local
     if not action and USE_LOCAL_LLM:
-        action = call_local_llm(base_prompt)
+        action = call_local_llm(prompt)
         if action:
-            action = action.lower()
-            log(base_prompt, f"[LOCAL LLM] {action}")
+            log(prompt, "[LOCAL TEXT] " + action)
 
-    # Fallback to OpenAI if local LLM failed or is disabled
+    # 3) Fallback to OpenAI
     if not action and api_key:
-        action = call_openai_llm(base_prompt)
+        action = call_openai_llm(prompt)
         if action:
-            log(base_prompt, f"[OPENAI] {action}")
+            log(prompt, "[OPENAI] " + action)
 
-    # If all LLMs failed, do nothing
+    # 4) Final fallback
     if not action:
-        log(base_prompt, "[NO ACTION] All LLMs failed, agent does nothing.")
+        log(prompt, "[NO RESP] defaulting to do nothing")
         return "do nothing"
 
-    # Check for valid actions
-    valid_actions = ['move up', 'move down', 'move left', 'move right',
-                     'collect', 'eat red', 'eat green', 'do nothing']
-
-    for valid in valid_actions:
+    action = action.lower().strip()
+    # Validate against allowed actions
+    for valid in [
+        "move up", "move down", "move left", "move right",
+        "collect", "eat red", "eat green", "do nothing"
+    ]:
         if action.startswith(valid):
             return valid
 
-    # Default fallback
     return "do nothing"

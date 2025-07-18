@@ -1,0 +1,251 @@
+Step,Agent,Action
+1,Agent1,failed to act
+1,Agent2,moved down (energy: 19)
+1,Agent3,collected green
+1,Agent4,collected red
+1,Agent5,moved left (energy: 19)
+2,Agent1,failed to act
+2,Agent2,failed to act
+2,Agent3,moved up (energy: 18)
+2,Agent4,moved up (energy: 18)
+2,Agent5,moved left (energy: 18)
+3,Agent1,did nothing
+3,Agent2,did nothing
+3,Agent3,moved up (energy: 17)
+3,Agent4,moved up (energy: 17)
+3,Agent5,did nothing
+4,Agent1,moved down (energy: 16)
+4,Agent2,moved right (energy: 16)
+4,Agent3,moved up (energy: 16)
+4,Agent4,moved up (energy: 16)
+4,Agent5,did nothing
+5,Agent1,did nothing
+5,Agent2,did nothing
+5,Agent3,moved up (energy: 15)
+5,Agent4,did nothing
+5,Agent5,did nothing
+6,Agent1,moved up (energy: 14)
+6,Agent2,moved up (energy: 14)
+6,Agent3,moved up (energy: 14)
+6,Agent4,did nothing
+6,Agent5,moved up (energy: 14)
+7,Agent1,moved down (energy: 13)
+7,Agent2,ate green (+30 energy)
+7,Agent3,did nothing
+7,Agent4,moved up (energy: 13)
+7,Agent5,moved up (energy: 13)
+8,Agent1,did nothing
+8,Agent2,did nothing
+8,Agent3,ate red (+30 energy)
+8,Agent4,moved up (energy: 12)
+8,Agent5,did nothing
+9,Agent1,did nothing
+9,Agent2,did nothing
+9,Agent3,failed to act
+9,Agent4,did nothing
+9,Agent5,ate red (+0 energy)
+10,Agent1,moved down (energy: 10)
+10,Agent2,moved down (energy: 40)
+10,Agent3,moved down (energy: 40)
+10,Agent4,ate green (+25 energy)
+10,Agent5,moved up (energy: 10)
+11,Agent1,did nothing
+11,Agent2,moved up (energy: 39)
+11,Agent3,did nothing
+11,Agent4,moved left (energy: 34)
+11,Agent5,moved up (energy: 9)
+12,Agent1,moved down (energy: 8)
+12,Agent2,collected green
+12,Agent3,moved down (energy: 38)
+12,Agent4,moved left (energy: 33)
+12,Agent5,did nothing
+13,Agent1,did nothing
+13,Agent2,ate green (+30 energy)
+13,Agent3,moved down (energy: 37)
+13,Agent4,did nothing
+13,Agent5,did nothing
+14,Agent1,did nothing
+14,Agent2,moved up (energy: 66)
+14,Agent3,did nothing
+14,Agent4,moved left (energy: 31)
+14,Agent5,moved up (energy: 6)
+15,Agent1,did nothing
+15,Agent2,moved down (energy: 65)
+15,Agent3,moved down (energy: 35)
+15,Agent4,moved left (energy: 30)
+15,Agent5,did nothing
+16,Agent1,did nothing
+16,Agent2,moved left (energy: 64)
+16,Agent3,moved down (energy: 34)
+16,Agent4,did nothing
+16,Agent5,did nothing
+17,Agent1,moved left (energy: 3)
+17,Agent2,moved up (energy: 63)
+17,Agent3,moved down (energy: 33)
+17,Agent4,did nothing
+17,Agent5,did nothing
+18,Agent1,did nothing
+18,Agent2,moved up (energy: 62)
+18,Agent3,moved down (energy: 32)
+18,Agent4,did nothing
+18,Agent5,moved down (energy: 2)
+19,Agent1,ate red (+50 energy)
+19,Agent2,moved left (energy: 61)
+19,Agent3,moved down (energy: 31)
+19,Agent4,ate red (+25 energy)
+19,Agent5,moved down (energy: 1)
+20,Agent1,moved left (energy: 50)
+20,Agent2,did nothing
+20,Agent3,failed to act
+20,Agent4,failed to act
+20,Agent5,ran out of energy
+21,Agent1,moved left (energy: 49)
+21,Agent2,did nothing
+21,Agent3,moved up (energy: 29)
+21,Agent4,moved down (energy: 49)
+21,Agent5,inactive
+22,Agent1,moved left (energy: 48)
+22,Agent2,ate red (+20 energy)
+22,Agent3,collected green
+22,Agent4,moved down (energy: 48)
+22,Agent5,inactive
+23,Agent1,did nothing
+23,Agent2,moved down (energy: 77)
+23,Agent3,moved up (energy: 27)
+23,Agent4,did nothing
+23,Agent5,inactive
+24,Agent1,did nothing
+24,Agent2,moved down (energy: 76)
+24,Agent3,moved up (energy: 26)
+24,Agent4,moved down (energy: 46)
+24,Agent5,inactive
+25,Agent1,did nothing
+25,Agent2,moved down (energy: 75)
+25,Agent3,moved up (energy: 25)
+25,Agent4,moved down (energy: 45)
+25,Agent5,inactive
+26,Agent1,collected green
+26,Agent2,collected red
+26,Agent3,did nothing
+26,Agent4,did nothing
+26,Agent5,inactive
+27,Agent1,moved up (energy: 43)
+27,Agent2,moved left (energy: 73)
+27,Agent3,failed to act
+27,Agent4,collected green
+27,Agent5,inactive
+28,Agent1,did nothing
+28,Agent2,moved left (energy: 72)
+28,Agent3,moved up (energy: 22)
+28,Agent4,moved up (energy: 42)
+28,Agent5,inactive
+29,Agent1,did nothing
+29,Agent2,moved left (energy: 71)
+29,Agent3,moved up (energy: 21)
+29,Agent4,did nothing
+29,Agent5,inactive
+30,Agent1,did nothing
+30,Agent2,moved left (energy: 70)
+30,Agent3,collected green
+30,Agent4,did nothing
+30,Agent5,inactive
+31,Agent1,did nothing
+31,Agent2,collected green
+31,Agent3,moved up (energy: 19)
+31,Agent4,did nothing
+31,Agent5,inactive
+32,Agent1,moved up (energy: 38)
+32,Agent2,nothing to collect
+32,Agent3,moved up (energy: 18)
+32,Agent4,moved down (energy: 38)
+32,Agent5,inactive
+33,Agent1,did nothing
+33,Agent2,moved left (energy: 67)
+33,Agent3,failed to act
+33,Agent4,moved down (energy: 37)
+33,Agent5,inactive
+34,Agent1,did nothing
+34,Agent2,moved left (energy: 66)
+34,Agent3,collected red
+34,Agent4,did nothing
+34,Agent5,inactive
+35,Agent1,did nothing
+35,Agent2,failed to act
+35,Agent3,did nothing
+35,Agent4,collected green
+35,Agent5,inactive
+36,Agent1,moved up (energy: 34)
+36,Agent2,did nothing
+36,Agent3,moved down (energy: 14)
+36,Agent4,moved up (energy: 34)
+36,Agent5,inactive
+37,Agent1,did nothing
+37,Agent2,ate green (+30 energy)
+37,Agent3,moved down (energy: 13)
+37,Agent4,moved up (energy: 33)
+37,Agent5,inactive
+38,Agent1,failed to act
+38,Agent2,moved up (energy: 92)
+38,Agent3,did nothing
+38,Agent4,moved up (energy: 32)
+38,Agent5,inactive
+39,Agent1,did nothing
+39,Agent2,moved up (energy: 91)
+39,Agent3,moved down (energy: 11)
+39,Agent4,moved up (energy: 31)
+39,Agent5,inactive
+40,Agent1,moved down (energy: 30)
+40,Agent2,did nothing
+40,Agent3,moved down (energy: 10)
+40,Agent4,collected green
+40,Agent5,inactive
+41,Agent1,moved down (energy: 29)
+41,Agent2,collected red
+41,Agent3,did nothing
+41,Agent4,ate green (+25 energy)
+41,Agent5,inactive
+42,Agent1,did nothing
+42,Agent2,ate red (+20 energy)
+42,Agent3,collected red
+42,Agent4,moved up (energy: 53)
+42,Agent5,inactive
+43,Agent1,did nothing
+43,Agent2,moved down (energy: 107)
+43,Agent3,moved up (energy: 7)
+43,Agent4,did nothing
+43,Agent5,inactive
+44,Agent1,did nothing
+44,Agent2,moved down (energy: 106)
+44,Agent3,ate red (+30 energy)
+44,Agent4,did nothing
+44,Agent5,inactive
+45,Agent1,moved down (energy: 25)
+45,Agent2,collected green
+45,Agent3,ate red (+30 energy)
+45,Agent4,did nothing
+45,Agent5,inactive
+46,Agent1,did nothing
+46,Agent2,moved up (energy: 104)
+46,Agent3,did nothing
+46,Agent4,did nothing
+46,Agent5,inactive
+47,Agent1,moved up (energy: 23)
+47,Agent2,collected red
+47,Agent3,moved down (energy: 63)
+47,Agent4,did nothing
+47,Agent5,inactive
+48,Agent1,moved up (energy: 22)
+48,Agent2,moved up (energy: 102)
+48,Agent3,moved down (energy: 62)
+48,Agent4,did nothing
+48,Agent5,inactive
+49,Agent1,did nothing
+49,Agent2,moved up (energy: 101)
+49,Agent3,did nothing
+49,Agent4,did nothing
+49,Agent5,inactive
+50,Agent1,did nothing
+50,Agent2,moved up (energy: 100)
+50,Agent3,ate green (+20 energy)
+50,Agent4,did nothing
+50,Agent5,inactive

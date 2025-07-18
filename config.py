@@ -18,7 +18,7 @@ AGENT_CONFIGS = {
     "Agent5": {'red': 0, 'green': 50},     # Green specialist
 }
 
-CONSUPTING_RATE = 0,1
+# CONSUMPTION_RATE = 0,1
 # Game mechanics
 ENERGY_LOSS_PER_TURN = 1
 REPLENISH_INTERVAL = 20  # Steps between food replenishment
@@ -63,7 +63,7 @@ LLM_MAX_TOKENS = 50
 LLM_RETRY_ATTEMPTS = 2
 
 # Local LLM settings
-USE_LOCAL_LLM = True  # Set to True to use local LLM, False for OpenAI
+USE_LOCAL_LLM = False  # Set to True to use local LLM, False for OpenAI
 USE_MULTIMODAL = False  # Set to True to use multimodal model (visual grid perception)
 LOCAL_LLM_MODEL = "phi3" #"tinyllama"  # Ollama model name for text-only
 MULTIMODAL_LLM_MODEL = "llava"  # Ollama model name for multimodal
